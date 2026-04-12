@@ -1,39 +1,129 @@
 /* PiTrac Documentation - Custom Styles */
 
-/* Slightly wider content area for hardware tables */
 .md-grid {
   max-width: 1400px;
 }
 
-/* Header logo — larger and inverted for visibility on dark header */
 .md-header__button.md-logo img {
   height: 2rem;
   filter: invert(1);
 }
 
-/* In dark mode the header is already dark, keep inverted */
 [data-md-color-scheme="slate"] .md-header__button.md-logo img {
   filter: invert(1);
 }
 
-/* Hero logo on homepage — only invert in dark mode */
 [data-md-color-scheme="slate"] .pitrac-logo-hero {
   filter: invert(1);
 }
 
-/* Hardware tables — compact, full-width scroll */
-.md-typeset__scrollwrap {
-  overflow-x: auto;
-}
-
 .md-typeset table:not([class]) {
-  font-size: 0.7rem;
-  min-width: 100%;
+  font-size: 0.72rem;
 }
 
 .md-typeset table:not([class]) td,
 .md-typeset table:not([class]) th {
-  padding: 0.3em 0.5em;
-  white-space: normal;
-  word-break: normal;
+  padding: 0.4em 0.6em;
+}
+
+a.stl-download {
+  color: var(--md-typeset-a-color);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+a.stl-download:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 1em 0;
+  border-radius: 0.3rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.stl-3d {
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  margin-left: 0.3em;
+  vertical-align: middle;
+  transition: color 0.15s;
+}
+
+.stl-3d:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.stl-3d .twemoji,
+.stl-3d svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+#stl-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+#stl-modal-overlay.active {
+  display: flex;
+}
+
+#stl-modal {
+  background: var(--md-default-bg-color);
+  border-radius: 0.5rem;
+  width: min(90vw, 800px);
+  height: min(80vh, 600px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+#stl-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+#stl-modal-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#stl-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+
+#stl-modal-close:hover {
+  color: var(--md-accent-fg-color);
+}
+
+#stl-modal-viewer {
+  flex: 1;
+  min-height: 0;
 }
