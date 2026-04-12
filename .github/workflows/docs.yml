@@ -18,14 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
+      - run: sudo apt-get install -y pngquant libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+
       - run: pip install -r requirements.txt
 
-      - run: mkdocs build
+      - env:
+          DISABLE_MKDOCS_2_WARNING: "true"
+        run: mkdocs build
 
       - uses: actions/upload-pages-artifact@v3
         with:
