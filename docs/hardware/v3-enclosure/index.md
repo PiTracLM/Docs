@@ -56,6 +56,7 @@ PiTrac/3D Printed Parts /Enclosure Version 3/
     - Clearly **mark modules and polarity** where relevant to prevent mistakes.
     - Take care not to **drop screws or other components** into the power supply during assembly.
     - Always install the **LinePower_Cover.stl** to minimize the risk of electric shock.
+    - Do not look directly into the LED at close range. Although the strobe may appear dim, most of the emitted light is invisible and can still cause eye damage.
 
     Failure to follow these precautions can result in **fire, electric shock, or personal injury**. Print and use these parts at your own risk.
 

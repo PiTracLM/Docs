@@ -33,6 +33,7 @@ We're developing companion videos to the written documentation to better visuall
 | 4D | Final Assembly | [Watch](https://youtu.be/sgJq0n0NwYA){ target="_blank" } |
 | 5A | De-Distortion Configuration | *Coming soon* |
 | 5B | Calibration | *Coming soon* |
+| - | Full V3 Enclosure Build | [Watch](https://youtu.be/bVOIPczu9Nk){ target="_blank" } |
 
 !!! note "Written docs are authoritative"
     The written documentation is meant to be the most up-to-date and accurate information on building PiTrac systems. If there is a discrepancy between the documentation and the videos, rely on the documents. Or, ask a question on the [Discord server](https://discord.gg/j9YWCMFVHN).

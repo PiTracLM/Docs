@@ -97,7 +97,12 @@ This document provides a comprehensive list of all components needed to build a 
 | -------- | ---------------------------------------- | ----------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | 10       | D6,D7,D8,D9,D10,D11,D12,D13,D14,D15     | Vishay Semiconductor Opto Division        | VSMA1085400              | [DigiKey](https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/VSMA1085400/15786357)                     |
 
-## Hardware -- Bolts and Nuts
+## Hardware -- Bolts and Nuts for V3 Enclosure
+The required hardware for the V3 enclosure can be found in the here:
+
+**[Bill Of Material](../hardware/v3-enclosure/assembly.md)**{ .md-button }
+
+## Hardware -- Bolts and Nuts for V2 Enclosure
 
 | Quantity | Hardware                                | Purpose                                                                                                                          |
 | -------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
