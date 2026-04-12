@@ -97,10 +97,31 @@ This document provides a comprehensive list of all components needed to build a 
 | -------- | ---------------------------------------- | ----------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | 10       | D6,D7,D8,D9,D10,D11,D12,D13,D14,D15     | Vishay Semiconductor Opto Division        | VSMA1085400              | [DigiKey](https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/VSMA1085400/15786357)                     |
 
-## Hardware -- Bolts and Nuts for V3 Enclosure
-The required hardware for the V3 enclosure can be found in the here:
+## Enclosure Panels -- V3
 
-**[Bill Of Material](../hardware/v3-enclosure/assembly.md)**{ .md-button }
+| Quantity | Hardware | Purpose | Notes |
+|----------|----------|---------|-------|
+| 1 | Acrylic Shankshield | Front panel protecting from club strikes | 138 x 264 x 4 mm (or 1/4 in); anything within 135-139.5 x 262.5-265 x 3-6.5 mm will work. "Museum style" if possible to reduce reflections |
+| 1 | Acrylic Backplate | Rear panel | 110 x 267 x 2 mm (or 1/4 in); anything within 108-111 x 265-268 x 1.5-3 mm will work. If **Back_Interface_Plate** is used, reduce length to 234.5-236.5 mm |
+
+## Hardware -- Bolts and Nuts for V3 Enclosure
+
+| Quantity | Hardware | Notes | Link |
+|----------|----------|-------|------|
+| 20 | ISO 4032 M5 nut | only 16 if you opt for sleeve nuts | - |
+| 4 | ISO 10511 M5 lock nut | lock preferred, ISO 4032 will work as well | - |
+| 4 | M5 washer | only if you do not opt for sleeve nuts | - |
+| 4 | M5x318 mm rod | trim to 318 mm for washer and nut assembly; shorter (306 mm) for sleeve nuts | - |
+| 10 | ISO 7380-2 M5x10 mm screw | 10-15 mm, four must be 10 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8614-SSBF-M5-10-A2) |
+| 12 | ISO 7380-2 M5x15 mm screw | 10-15 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8616-SSBF-M5-14-A2) |
+| 12 | ISO 7380-2 M5x20 mm screw | 20-25 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8619-SSBF-M5-20-A2) |
+| 4 | ISO 4762 M5x35 mm screw | optional -- alternative to the M5 through rod design | - |
+| 4 | ISO 4762 M3x6 mm screw | 6-15 mm; cylindrical head | - |
+| 2 | M3x6 mm screw | - | [Link](https://tinyurl.com/4y7m4uxr) |
+| 12 | M2x10 mm self-tapping screw | - | [Link](https://tinyurl.com/rj8hf3k6) |
+| 8 | M3x5 mm self-tapping screw | - | [Link](https://tinyurl.com/rj8hf3k6) |
+| 17 | M3x10 mm self-tapping screw | - | [Link](https://tinyurl.com/rj8hf3k6) |
+| 4 | M5 x 12 mm sleeve nut | provides a more aesthetic assembly | [Link](https://tinyurl.com/3srvja7j) |
 
 ## Hardware -- Bolts and Nuts for V2 Enclosure
 
