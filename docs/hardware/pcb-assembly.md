@@ -55,7 +55,8 @@ There are three different PCB filesets. The combined PCB has two BOM variants de
 Hardware/Fabrication Files/V3 Connector Only Gerbers.zip
 ```
 
-**Assembly of V3 Connector with vendor not recommended**
+!!! warning "Assembly of V3 Connector with vendor not recommended"
+    The V3 Connector is entirely through-hole and straightforward to assemble by hand. Vendor assembly is not recommended.
 
 ```
 Hardware/Assembly Files/V3 Connector Only/V3 Connector Only Assembly/*
