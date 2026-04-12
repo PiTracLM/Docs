@@ -49,7 +49,7 @@ document$.subscribe(function () {
     var isDark = document.body.getAttribute("data-md-color-scheme") === "slate";
 
     new StlViewer(container, {
-      load_three_files: document.location.origin + "/PiTrac/assets/js/viewstl/",
+      load_three_files: document.querySelector('script[src*="stl_viewer"]').src.replace("stl_viewer.min.js", ""),
       models: [{
         id: 0,
         filename: url,
