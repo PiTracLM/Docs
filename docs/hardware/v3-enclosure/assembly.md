@@ -1,67 +1,28 @@
 ---
 title: Enclosure Version 3 Assembly
 description: Assembly instructions for the V3 Enclosure.
-hide:
-  - navigation
-  - toc
 ---
 
 # Enclosure Version 3 / Assembly
 
 ---
 
-## Bill Of Material
+## Before You Begin
 
-| Number | Part | Qty | Notes | Link |
-|--------|---------|---------|--------|--------|
-| **Printed Parts** |||||
-| 1 | EyeScreen | 3 | - |- |
-| 2 | 5x2IRLED_Eyeball | 1 | - |- |
-| 3 | Stack_Module_PSU_vent | 1 | version with less ventilation holes also available |- |
-| 4 | Pi5_Carrier_vertical_3mm | 1 | choose height and hole version according to your setup (NVHe, HDMI access...) |- |
-| 5 | IMX296-MPI_Eyeball_6mm_camfered | 2 | Print, choose correct variant for your camera |- |
-| 6 | Carrier_Clamps | 4 | - |- |
-| 7 | ConnectorBoardv3_Carrier | 1 | - |- |
-| 8 | Foot | 4 | - |- |
-| 9 | LinePower_Cover | 1 | - | - |
-| 10 | Stack_Module | 3 | - |- |
-| 11 | EyeScreen_Clamp | 3 | - |- |
-| 12 | Stack_Module_Cover_forInserts | 1 | Variant/Stack_Module_Cover, if you prefer one simple part |- |
-| 13 | Spacer | 16 | - |- |
-| 14 | Ambient_LED_Screen | 1 | - | - |
-| 15 | IRFilter_Mount_1inchround | 1 | only for 1" round filters, otherwise use mount from ...\3D Printed Parts\Enclosure Version 2\ ...  | - |
-| 16 | Calibration Rig| 1 | .../3D Printed Parts/Enclosure Version 3/Part/**Calibration Rig** | - |
-| 17 | Stack_Module_Cover_insert | 1 | - | - |
-| 18 | Stack_Module_Cover_LogoTee | 1 | - | - |
-| 19 | Stack_Module_Cover_LogoBall | 1 | - | - |
-| 20 | Ambient_LED_Visor | 1 | - | - |
-| **Purchase Parts** |||||
-| 1 | Camera| 2 | - |  - |
-| 2 | 5x2 IR LED | 1 | or legacy 100 W COB IR LED with 60 deg Lens + reflector, need legacy 3D printed **LED_Eyeball** and **LED_clamp** | - |
-| 4 | Meanwell LRS-75-5 | 1 | - | - |
-| 5 | AC Power Inlet C14 with Fuse | 1 | - |  - |
-| 6 | USB COB LED Strip Lights 6.56 ft | 1 | roughly 60 cm required; 8mm widht |  - |
-| 7 | Wires | 3 | - |  - |
-| 8 | Pi5 | 1 | - | - |
-| 9 | ConnectorBoardv3 | 1 | - | - |
-| 10 | Acrylic Shankshield | 1 | 138 x 264 x 4 mm (or 1/4 in) anything within 135-139.5 x 262.5-265 x 3-6.5 mm will work, "museum style" if possible to reduce reflections| - |
-| 11 | Acrylic Backplate | 1 | 110 x 267 x 2 mm (or 1/4 in) anything within 108-111 x 265-268 x 1.5-3 mm will work; if **Back_Interface_Plate** is used reduce length to 234.5-236.5 (including the D-type Back_Interface-Plate, which will need slighly shorter length because the plate is taller) | - |
-| 12 | IR-Pass Filter| 1 | 1" round or 1" square |
-| **Standard Parts** ||||
-| 1 | ISO 4032 M5 nut| 20 | only 16 if you opt for sleeve nuts | - |
-| 2 | ISO 10511 M5 lock nut| 4 | lock peferred, ISO 4032 will work as well | - |
-| 3 | M5 washer | 4 | only if you do not opt for sleeve nuts | - |
-| 4 | M5x318 mm rod | 4 | trim to 318 mm for washer and nut assembly; shorter (306 mm) for sleeve nuts | - |
-| 5 | ISO 7380-2 M5x10 mm screw| 10 | 10-15 mm, four must be 10 mm; ISO 4762 optional | [-](https://accu-components.com/us/flanged-button-screws/8614-SSBF-M5-10-A2) |
-| 6 | ISO 7380-2 M5x15 mm screw| 12 | 10-15 mm; ISO 4762 optional | [-](https://accu-components.com/us/flanged-button-screws/8616-SSBF-M5-14-A2) |
-| 7 | ISO 7380-2 M5x20 mm screw| 12 | 20-25 mm; ISO 4762 optional | [-](https://accu-components.com/us/flanged-button-screws/8619-SSBF-M5-20-A2) |
-| 8 | ISO 4762 M5x35 mm screw| 4 | -optional- alternative to the M5 trough rod design | - |
-| 9 | ISO 4762 M3x6 mm screw | 4 | 6-15 mm; cylindrical head | - |
-| 10 | M3x6 mm screw | 2 | - | [-](https://tinyurl.com/4y7m4uxr) |
-| 11 | M2x10 mm self-tapping screw | 12 | - | [-](https://tinyurl.com/rj8hf3k6) |
-| 12 | M3x5 mm self-tapping screw | 8 | - | [-](https://tinyurl.com/rj8hf3k6) |
-| 13 | M3x10 mm self-tapping screw | 17 | - | [-](https://tinyurl.com/rj8hf3k6) |
-| 14 | M5 x 12 mm sleeve nuts| 4 | provides a more aesthetic assembly | [-](https://tinyurl.com/3srvja7j) |
+Before starting assembly, make sure you have sourced all components and printed all parts:
+
+- **[Parts List](../../hardware/parts-list.md)** -- everything you need to purchase (electronics, hardware, screws, acrylic panels)
+- **[3D Printing](3d-printing.md)** -- STL downloads and slicer settings for all printed parts
+
+Each assembly step below lists the specific parts needed for that step.
+
+### Video Walkthrough
+
+Prefer video? The full assembly is covered here:
+
+<div class="video-wrapper" markdown>
+  <iframe src="https://www.youtube.com/embed/bVOIPczu9Nk" title="PiTrac V3 Enclosure Assembly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -69,23 +30,17 @@ hide:
 
 The design is modular and intended to make it easy to swap between different stack configurations that may be introduced in future versions of the PiTrac Launch Monitor.
 
-As a result, there is some redundancy in the assembly. Each stack provides eight potential connection points: four inner holes used to fasten adjacent stacks together with short M5 screws, and four outer through-holes that allow all stacks to be clamped together at once using threaded rods.
+Each stack provides eight potential connection points: four inner holes used to fasten adjacent stacks together with short M5 screws, and four outer through-holes that allow all stacks to be clamped together at once using threaded rods.
 
 In most cases, using only one of these two fastening methods is sufficient. Threaded rods allow for easier assembly and disassembly, while short screws may be preferable for an initial prototype setup.
 
-For future changes to the overall stack height, the threaded rods may need to be shortened or replaced. If you choose to assemble the stacks using only short M5 screws, please note the M5x35 mm option described in the Stack_Module_PSU assembly section.
-
-The following assembly instruction might be a hard read, so feel free to watch the video instead:
-
-[![YouTube Video](https://img.youtube.com/vi/bVOIPczu9Nk/maxresdefault.jpg)](https://youtu.be/bVOIPczu9Nk?si=cu9BIsXWRHtM7RDG)
+For future changes to the overall stack height, the threaded rods may need to be shortened or replaced. If you choose to assemble the stacks using only short M5 screws, please note the M5x35 mm option described in the PSU Stack Module Assembly section.
 
 ---
 
 ## Camera Assembly
 
-![Camera Assembly](../../assets/technicaldrawings/Assy_Camera_Eyeball-3D.svg)
-
-[Camera Assembly Drawing](../../assets/technicaldrawings/Assy_Camera_Eyeball.svg)
+[View Drawing](../../assets/technicaldrawings/Assy_Camera_Eyeball.svg){ .md-button } [View 3D](../../assets/technicaldrawings/Assy_Camera_Eyeball-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
@@ -93,12 +48,12 @@ Tools:
 - 2.5 mm Allen key
 - Sandpaper (optional)
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | IMX296-MPI_Eyeball_6mm_camfered | 1 | Remove support material |
-| 2 | ISO 4762 M3x6 mm screw | 2 | 6-15 mm; cylindrical head |
-| 3 | M2x10 mm self-tapping screw | 4 | 6-12 mm |
-| 4 | Camera| 1 |  |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [IMX296-MPI_Eyeball_6mm_camfered.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/IMX296-MPI_Eyeball_6mm_camfered.stl){ .stl-download } | 1 | Remove support material |
+| ISO 4762 M3x6 mm screw | 2 | 6-15 mm; cylindrical head |
+| M2x10 mm self-tapping screw | 4 | 6-12 mm |
+| Camera | 1 | |
 
 1. Remove all support material.
 2. Smooth spherical surfaces if needed.
@@ -114,19 +69,17 @@ Tools:
 
 ## LED Assembly (5x2 IR LED board)
 
-![LED Assembly](../../assets/technicaldrawings/Assy_PiTracIRLED-3D.svg)
-
-[LED Assembly Drawing](../../assets/technicaldrawings/Assy_PiTracIRLED.svg)
+[View Drawing](../../assets/technicaldrawings/Assy_PiTracIRLED.svg){ .md-button } [View 3D](../../assets/technicaldrawings/Assy_PiTracIRLED-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - Cross-head screwdriver
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | 5x2IRLED_Eyeball | 1 | - |
-| 2 | 5x2 IR LED board | 1 | - |
-| 5 | M3x10 mm self-tapping screw | 2 | 8-12 mm |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [5x2IRLED_Eyeball.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/5x2IRLED_Eyeball.stl){ .stl-download } | 1 | - |
+| 5x2 IR LED board | 1 | - |
+| M3x10 mm self-tapping screw | 2 | 8-12 mm |
 
 1. Remove all support material.
 2. Smooth spherical surfaces if needed.
@@ -136,19 +89,19 @@ Tools:
 
 ---
 
-## LED Assembly (legacy 100 W COB, can be skipped if 5x2 IR LED is used)
+## LED Assembly (Legacy COB)
 
 Tools:
 
 - Cross-head screwdriver
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | LED_Eyeball | 1 | - |
-| 2 | LED_Clamp | 1 | - |
-| 3 | 100 W COB IR LED with wires | 1 | - |
-| 4 | 60 deg LED Lens - 44 mm + Reflector | 1 | - |
-| 5 | M3x10 mm self-tapping screw | 4 | 8-12 mm |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [LED_Eyeball.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Legacy/LED_Eyeball.stl){ .stl-download } | 1 | - |
+| [LED_Clamp.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Legacy/LED_Clamp.stl){ .stl-download } | 1 | - |
+| 100 W COB IR LED with wires | 1 | - |
+| 60 deg LED Lens - 44 mm + Reflector | 1 | - |
+| M3x10 mm self-tapping screw | 4 | 8-12 mm |
 
 1. Remove all support material.
 2. Smooth spherical surfaces if needed.
@@ -161,13 +114,7 @@ Tools:
 
 ## Eyeball Assembly
 
-![Tee-Cam Screen Assembly](../../assets/technicaldrawings/Assy_Tee_Cam-3D.svg)
-
-![LED Screen Assembly](../../assets/technicaldrawings/Assy_Screen_PiTracIRLED-3D.svg)
-
-![Flight-Cam Screen Assembly](../../assets/technicaldrawings/Assy_Flight_Cam-3D.svg)
-
-[Flight-Cam Screen Assembly Drawing](../../assets/technicaldrawings/Assy_Flight_Cam.svg)
+[Tee-Cam 3D](../../assets/technicaldrawings/Assy_Tee_Cam-3D.svg){ .md-button .md-button--primary } [LED Screen 3D](../../assets/technicaldrawings/Assy_Screen_PiTracIRLED-3D.svg){ .md-button .md-button--primary } [Flight-Cam Drawing](../../assets/technicaldrawings/Assy_Flight_Cam.svg){ .md-button } [Flight-Cam 3D](../../assets/technicaldrawings/Assy_Flight_Cam-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
@@ -175,13 +122,13 @@ Tools:
 - Sandpaper (optional)
 - Superglue (optional)
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Camera Assembly or LED Assembly | 1 | - |
-| 2 | EyeScreen | 1 | - |
-| 3 | EyeScreen_Clamp | 1 | - |
-| 4 | ISO 4032 M5 nut| 4 | - |
-| 5 | ISO 7380-2 M5x20 mm screw| 4 | 20-25 mm; ISO 4762 optional |
+| Part | Qty | Notes |
+|------|-----|-------|
+| Camera Assembly or LED Assembly | 1 | - |
+| [EyeScreen.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/EyeScreen.stl){ .stl-download } | 1 | - |
+| [EyeScreen_Clamp.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/EyeScreen_Clamp.stl){ .stl-download } | 1 | - |
+| ISO 4032 M5 nut | 4 | - |
+| ISO 7380-2 M5x20 mm screw | 4 | 20-25 mm; ISO 4762 optional |
 
 1. Remove support material.
 2. Smooth spherical surfaces if needed.
@@ -197,31 +144,29 @@ Tools:
 
 ## PSU Stack Module Assembly
 
-![PSU Stack Module Assembly](../../assets/technicaldrawings/Assy_Stack_Module_PSU-3D.svg)
-
-[PSU Stack Module Assembly Drawing](../../assets/technicaldrawings/Assy_Stack_Module_PSU.svg)
+[View Drawing](../../assets/technicaldrawings/Assy_Stack_Module_PSU.svg){ .md-button } [View 3D](../../assets/technicaldrawings/Assy_Stack_Module_PSU-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - Cross-head screwdriver
 - 3 mm Allen key for ISO 7380-2 or 4 mm for ISO 4762
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Stack_Module_PSU_vent | 1 | - |
-| 2 | Ambient_LED_Screen | 1 | - |
-| 3 | LinePower_Cover | 1 | - |
-| 4 | Ambient_LED_Visor | 1 | - |
-| 5 | Spacer | 4 | - |
-| 6 | Meanwell LRS-75-5 | 1 | - |
-| 7 | AC Power Inlet C14 with Fuse | 1 | - |
-| 8 | USB COB LED Strip Lights 6.56 ft | 1 | roughly 60 cm required; 8mm widht |
-| 9 | Wires | 3 | - |
-| 10 | M3x6 mm screw | 2 | 5-6 mm |
-| 11 | M3x5 mm self-tapping screw | 4 | 5-6 mm |
-| 12 | M3x10 mm self-tapping screw | 4 | 5-16 mm |
-| 13 | ISO 4762 M5x35 mm screw | 4 | -optional- alternative to the M5 trough rod design |
-| 14 | ISO 10511 M5 lock nut | 4 | -optional- alternative to the M5 trough rod design; lock peferred, ISO 4032 will work as well |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [Stack_Module_PSU_vent.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module_PSU_vent.stl){ .stl-download } | 1 | - |
+| [Ambient_LED_Screen.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Ambient_LED_Screen.stl){ .stl-download } | 1 | - |
+| [LinePower_Cover.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/LinePower_Cover.stl){ .stl-download } | 1 | - |
+| [Ambient_LED_Visor.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Ambient_LED_Visor.stl){ .stl-download } | 1 | - |
+| [Spacer.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Spacer.stl){ .stl-download } | 4 | - |
+| Meanwell LRS-75-5 | 1 | - |
+| AC Power Inlet C14 with Fuse | 1 | - |
+| USB COB LED Strip Lights 6.56 ft | 1 | roughly 60 cm required; 8mm width |
+| Wires | 3 | - |
+| M3x6 mm screw | 2 | 5-6 mm |
+| M3x5 mm self-tapping screw | 4 | 5-6 mm |
+| M3x10 mm self-tapping screw | 4 | 5-16 mm |
+| ISO 4762 M5x35 mm screw | 4 | -optional- alternative to the M5 through rod design |
+| ISO 10511 M5 lock nut | 4 | -optional- alternative to the M5 through rod design; lock preferred, ISO 4032 will work as well |
 
 1. Remove support material.
 2. Mount the **Meanwell PSU** in the **Stack_Module_PSU_vent** with two **M3x6 mm screws** from the bottom side (in the center of the PSU).
@@ -245,24 +190,20 @@ Tools:
 
 ## Camera Stack Module Assembly
 
-![Tee Camera Stack Module Assembly](../../assets/technicaldrawings/Assy_Stack_Module_Tee_Cam-3D.svg)
-
-![Flight Camera Stack Module Assembly](../../assets/technicaldrawings/Assy_Stack_Module_Flight_Cam-3D.svg)
-
-[Flight Camera Stack Module Assembly Drawing](../../assets/technicaldrawings/Assy_Stack_Module_Flight_Cam.svg)
+[Tee-Cam 3D](../../assets/technicaldrawings/Assy_Stack_Module_Tee_Cam-3D.svg){ .md-button .md-button--primary } [Flight-Cam Drawing](../../assets/technicaldrawings/Assy_Stack_Module_Flight_Cam.svg){ .md-button } [Flight-Cam 3D](../../assets/technicaldrawings/Assy_Stack_Module_Flight_Cam-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - 3 mm Allen key for ISO 7380-2 or 4 mm for ISO 4762
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Camera Screen Assembly | 1 | - |
-| 2 | Stack_Module | 1 | - |
-| 3 | Spacer | 4 | - |
-| 4 | IRFilter_Mount_1inchround  | 1 | alternative square design from V2 Enclosure, only for flight cam |
-| 5 | ISO 7380-2 M5x10 mm screw | 2 | 10-15 mm; ISO 4762 optional |
-| 6 | IR-Pass Filter| 1 | 1" round or 1" square, only for flight cam |
+| Part | Qty | Notes |
+|------|-----|-------|
+| Camera Screen Assembly | 1 | - |
+| [Stack_Module.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module.stl){ .stl-download } | 1 | - |
+| [Spacer.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Spacer.stl){ .stl-download } | 4 | - |
+| [IRFilter_Mount_1inchround.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/IRFilter_Mount_1inchround.stl){ .stl-download } | 1 | alternative square design from V2 Enclosure, only for flight cam |
+| ISO 7380-2 M5x10 mm screw | 2 | 10-15 mm; ISO 4762 optional |
+| IR-Pass Filter | 1 | 1" round or 1" square, only for flight cam |
 
 1. Remove support material.
 2. Pre-tap the lower **EyeScreen** holes with a screw.
@@ -274,18 +215,18 @@ Tools:
 
 ## LED Stack Module Assembly
 
-![LED Stack Module Assembly](../../assets/technicaldrawings/Assy_Stack_Module_LED-3D.svg)
+[View 3D](../../assets/technicaldrawings/Assy_Stack_Module_LED-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - 3 mm Allen key for ISO 7380-2 or 4 mm for ISO 4762
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | LED Screen Assembly | 1 | - |
-| 2 | Stack_Module | 1 | - |
-| 3 | Spacer | 4 | - |
-| 4 | ISO 7380-2 M5x10 mm screw| 2 | 10-15 mm; ISO 4762 optional |
+| Part | Qty | Notes |
+|------|-----|-------|
+| LED Screen Assembly | 1 | - |
+| [Stack_Module.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module.stl){ .stl-download } | 1 | - |
+| [Spacer.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Spacer.stl){ .stl-download } | 4 | - |
+| ISO 7380-2 M5x10 mm screw | 2 | 10-15 mm; ISO 4762 optional |
 
 1. Remove support material.
 2. Pre-tap the lower **EyeScreen** holes with a screw.
@@ -296,26 +237,20 @@ Tools:
 
 ## Electronics
 
-![Pi5 Assembly](../../assets/technicaldrawings/Assy_RaspberryPi5_carrier-3D.svg)
-
-![V3Connector Board Assembly](../../assets/technicaldrawings/Assy_V3Connector_Board-3D.svg)
-
-[Pi5 Assembly Drawing](../../assets/technicaldrawings/Assy_RaspberryPi5_carrier.svg)
-
-[V3Connector Board Assembly Drawing](../../assets/technicaldrawings/Assy_V3Connector_Board.svg)
+[Pi5 Drawing](../../assets/technicaldrawings/Assy_RaspberryPi5_carrier.svg){ .md-button } [Pi5 3D](../../assets/technicaldrawings/Assy_RaspberryPi5_carrier-3D.svg){ .md-button .md-button--primary } [Connector Board Drawing](../../assets/technicaldrawings/Assy_V3Connector_Board.svg){ .md-button } [Connector Board 3D](../../assets/technicaldrawings/Assy_V3Connector_Board-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - Cross-head screwdriver
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Pi5_Carrier_vertical_3mm | 1 | choose height and hole version according to your setup (NVHe, HDMI access...) |
-| 2 | ConnectorBoardv3_Carrier | 1 | - |
-| 3 | Pi5 | 1 | - |
-| 4 | ConnectorBoardv3 | 1 | - |
-| 5 | M3x10 mm self-tapping screw | 4 | - |
-| 6 | M2x10 mm self-tapping screw | 4 | alternative: M2.5 screws + risers, for trough hole variant |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [Pi5_Carrier_vertical_3mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Pi5_Carrier_vertical_3mm.stl){ .stl-download } | 1 | choose height and hole version according to your setup (NVMe, HDMI access...) |
+| [ConnectorBoardv3_Carrier.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/ConnectorBoardv3_Carrier.stl){ .stl-download } | 1 | - |
+| Pi5 | 1 | - |
+| ConnectorBoardv3 | 1 | - |
+| M3x10 mm self-tapping screw | 4 | - |
+| M2x10 mm self-tapping screw | 4 | alternative: M2.5 screws + risers, for through hole variant |
 
 1. Mount the **ConnectorBoardv3** on its carrier with four **M3x10 mm self-tapping screws**.
 2. Mount the **Pi5** on its carrier with four **M2x10 mm self-tapping screws**. Ensure right orientation: The SD card should align with the opening.
@@ -330,24 +265,22 @@ Tools:
 
 ---
 
-## Cover assembly
+## Cover Assembly
 
-![Cover Assembly](../../assets/technicaldrawings/Assy_Stack_Module_Cover_forInserts-3D.svg)
-
-[Cover Assembly Drawing](../../assets/technicaldrawings/Assy_Stack_Module_Cover_forInserts.svg)
+[View Drawing](../../assets/technicaldrawings/Assy_Stack_Module_Cover_forInserts.svg){ .md-button } [View 3D](../../assets/technicaldrawings/Assy_Stack_Module_Cover_forInserts-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - Cross-head screwdriver
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Stack_Module_Cover_forInserts | 1 | - |
-| 2 | Stack_Module_Cover_insert | 1 | - |
-| 3 | Stack_Module_Cover_LogoTee | 1 | - |
-| 4 | Stack_Module_Cover_LogoBall | 1 | - |
-| 5 | M3x5 mm self-tapping screw | 4 | - |
-| 6 | M3x10 mm self-tapping screw | 5 | - |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [Stack_Module_Cover_forInserts.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module_Cover_forInserts.stl){ .stl-download } | 1 | - |
+| [Stack_Module_Cover_insert.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module_Cover_insert.stl){ .stl-download } | 1 | - |
+| [Stack_Module_Cover_LogoTee.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module_Cover_LogoTee.stl){ .stl-download } | 1 | - |
+| [Stack_Module_Cover_LogoBall.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Stack_Module_Cover_LogoBall.stl){ .stl-download } | 1 | - |
+| M3x5 mm self-tapping screw | 4 | - |
+| M3x10 mm self-tapping screw | 5 | - |
 
 1. Place and twist the **Stack_Module_Cover_insert** into the **Stack_Module_Cover_forInserts**. Ensure correct orientation
 2. Push the **Stack_Module_Cover_LogoTee** in the **Stack_Module_Cover_forInserts**. Secure with a **M3x10 mm self-tapping screw** from below.
@@ -361,21 +294,19 @@ Tools:
 
 ## Stack Module to Stack Module Assembly
 
-![PiTrac Assembly](../../assets/technicaldrawings/Assy_PiTrac-3D.svg)
-
-[PiTrac Assembly Drawing](../../assets/technicaldrawings/Assy_PiTrac.svg)
+[View Drawing](../../assets/technicaldrawings/Assy_PiTrac.svg){ .md-button } [View 3D](../../assets/technicaldrawings/Assy_PiTrac-3D.svg){ .md-button .md-button--primary }
 
 Tools:
 
 - 3 mm or 4 mm Allen key (ball-end preferred)
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Camera Stack Module Assembly | 2 | - |
-| 2 | LED Stack Module Assembly | 1 | - |
-| 3 | PSU Stack Module Assembly | 1 | - |
-| 4 | ISO 7380-2 M5x15 mm screw | 8 | 10-15 mm; ISO 4762 optional |
-| 5 | ISO 7380-2 M5x10 mm screw | 4 | 10 mm; ISO 4762 optional |
+| Part | Qty | Notes |
+|------|-----|-------|
+| Camera Stack Module Assembly | 2 | - |
+| LED Stack Module Assembly | 1 | - |
+| PSU Stack Module Assembly | 1 | - |
+| ISO 7380-2 M5x15 mm screw | 8 | 10-15 mm; ISO 4762 optional |
+| ISO 7380-2 M5x10 mm screw | 4 | 10 mm; ISO 4762 optional |
 
 **2nd on 1st stack**
 
@@ -397,17 +328,17 @@ Tools:
 
 ---
 
-## Electronics installation
+## Electronics Installation
 
 Tools:
 
 - (none)
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Pi5 Assembly | 1 | choose height and hole version according to your setup (NVHe, HDMI access...) |
-| 2 | ConnectorBoardv3 Assembly | 1 | - |
-| 3 | Carrier_Clamps | 4 | - |
+| Part | Qty | Notes |
+|------|-----|-------|
+| Pi5 Assembly | 1 | choose height and hole version according to your setup (NVMe, HDMI access...) |
+| ConnectorBoardv3 Assembly | 1 | - |
+| [Carrier_Clamps.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Carrier_Clamps.stl){ .stl-download } | 4 | - |
 
 1. Slide the **ConnectorBoardv3 assembly** in the inner most slot and attach the Powersupply wires. Input terminals should face downwards toward the powersupply.
 2. Plug in the USB cable from the LED strip and the USB C cable for the raspberry pi.
@@ -427,7 +358,7 @@ Tools:
 
 ---
 
-## Cover installation
+## Cover Installation
 
 Tools:
 
@@ -435,18 +366,18 @@ Tools:
 - Saw for trimming the M5 rods
 - File for deburring
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Stack_Module_Cover_forInserts assembly | 1 | - |
-| 2 | M5 x 12 mm sleeve nut | 4 | - |
-| 3 | ISO 4032 M5 nut | 4 | alternative to sleeve nuts |
-| 4 | ISO 10511 M5 lock nut | 4 | lock peferred, ISO 4032 will work as well |
-| 5 | M5x306 mm rod | 4 | trim to 306 mm, or longer (318 mm) for normal nuts |
-| 6 | Spacer | 4 | - |
-| 7 | M5 washer | 4 | alternative to sleeve nuts |
-| 8 | ISO 7380-2 M5x15 mm screw| 4 | 10-15 mm; ISO 4762 optional |
-| 9 | Acrylic Shankshield | 1 | - |
-| 10 | Acrylic Backplate | 1 | - |
+| Part | Qty | Notes |
+|------|-----|-------|
+| Stack_Module_Cover_forInserts assembly | 1 | - |
+| M5 x 12 mm sleeve nut | 4 | - |
+| ISO 4032 M5 nut | 4 | alternative to sleeve nuts |
+| ISO 10511 M5 lock nut | 4 | lock preferred, ISO 4032 will work as well |
+| M5x306 mm rod | 4 | trim to 306 mm, or longer (318 mm) for normal nuts |
+| [Spacer.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Spacer.stl){ .stl-download } | 4 | - |
+| M5 washer | 4 | alternative to sleeve nuts |
+| ISO 7380-2 M5x15 mm screw | 4 | 10-15 mm; ISO 4762 optional |
+| Acrylic Shankshield | 1 | - |
+| Acrylic Backplate | 1 | - |
 
 **Stack_Module_Cover on 4th stack**
 
@@ -474,10 +405,10 @@ Tools:
 
 - Superglue
 
-| Number | Part | Qty | Notes |
-|--------|---------|---------|--------|
-| 1 | Foot | 4 | - |
-| 2 | ISO 4032 M5 nut | 4 | - |
+| Part | Qty | Notes |
+|------|-----|-------|
+| [Foot.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Foot.stl){ .stl-download } | 4 | - |
+| ISO 4032 M5 nut | 4 | - |
 
 1. Glue the nuts into the **feet**.
 2. Wait for the glue to be fully cured.
