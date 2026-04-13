@@ -60,7 +60,7 @@ plugins:
   - optimize
   - social:
       cards_layout_options:
-        logo: docs/assets/images/logos/PiTrac_Square.png
+        logo: docs/assets/images/logos/Social.png
         background_color: "#3f51b5"
   - glightbox
   - git-revision-date-localized:
