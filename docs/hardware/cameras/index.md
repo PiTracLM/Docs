@@ -1,6 +1,6 @@
 ---
 title: Cameras
-description: Complete guide to camera selection, configuration, and calibration for PiTrac golf launch monitor including global shutter cameras, IMX296 sensors, and camera setup.
+description: Camera selection, lens options, and dual-camera setup for PiTrac golf launch monitor, covering Sony IMX296 global shutter sensors and configuration.
 ---
 
 # Camera System

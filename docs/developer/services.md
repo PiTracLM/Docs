@@ -1,6 +1,6 @@
 ---
 title: Service Architecture
-description: PiTrac systemd service, process management via the web server, and the pitrac_lm lifecycle.
+description: The pitrac-web systemd service, PiTracProcessManager spawning the pitrac_lm C++ binary, start and stop sequences, PID tracking, and migration cleanup.
 ---
 
 # Service Architecture

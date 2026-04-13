@@ -1,6 +1,6 @@
 ---
 title: First Login & Updates
-description: Initial login to Raspberry Pi, system updates, and basic configuration for PiTrac including SSH access and sudo privileges.
+description: Log into your Raspberry Pi via SSH or console, run apt update and upgrade, verify sudo privileges, and confirm 64-bit aarch64 OS before installing PiTrac.
 ---
 
 # First Login & Updates

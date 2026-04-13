@@ -1,6 +1,6 @@
 ---
 title: Raspberry Pi Setup
-description: Complete guide for setting up Raspberry Pi computers for PiTrac, including OS installation, first login, system updates, and optional advanced configurations.
+description: Prepare a Raspberry Pi 5 or Pi 4 for PiTrac from blank SD card to a fully updated system ready for install, with optional NVMe and NAS configurations.
 ---
 
 # Raspberry Pi Setup & Configuration

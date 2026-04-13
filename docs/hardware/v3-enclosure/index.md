@@ -1,6 +1,6 @@
 ---
 title: V3 Enclosure
-description: V3 Enclosure overview, assembly guide and part printing guide
+description: Overview of the PiTrac V3 enclosure design, folder structure, FreeCAD source files, safety guidance, calibration coordinates, and design requirements.
 ---
 
 # V3 Enclosure

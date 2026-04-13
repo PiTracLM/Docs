@@ -1,6 +1,6 @@
 ---
 title: Advanced Configuration
-description: Advanced Raspberry Pi configuration for PiTrac including NVMe boot setup, NAS drive mounting, Samba server configuration, and SSH key authentication.
+description: Optional Raspberry Pi configurations for PiTrac including NVMe SSD boot for faster performance, NFS or CIFS NAS mounting, Samba sharing, and SSH keys.
 ---
 
 # Advanced Configuration

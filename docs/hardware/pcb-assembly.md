@@ -1,6 +1,6 @@
 ---
 title: PCB Assembly
-description: Complete guide to ordering and assembling the PiTrac Connector Board PCB, including manufacturing options, component sourcing, and assembly instructions for the custom circuit board.
+description: Guide to ordering and hand-assembling the PiTrac V3 Connector Board and IRLED PCBs, with fabrication files, BOM sourcing, soldering tips, and wiring.
 ---
 
 # Connector Board

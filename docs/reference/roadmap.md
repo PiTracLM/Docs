@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-description: PiTrac development roadmap and project status including hardware versions, software features, and future development plans for the open-source golf launch monitor.
+description: PiTrac roadmap explaining the current Compute Board and Version 2 enclosure crossroads, single-Pi operation, build recommendations, and upcoming features.
 ---
 
 # Roadmap

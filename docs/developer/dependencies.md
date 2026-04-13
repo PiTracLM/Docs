@@ -1,6 +1,6 @@
 ---
 title: Dependencies Management
-description: PiTrac library versions, build-from-source dependencies, system packages, and platform differences.
+description: PiTrac library dependencies including OpenCV 4.13, Boost, NCNN, lgpio, libcamera, the Meson build system, and Raspberry Pi 4 versus Pi 5 platform differences.
 ---
 
 # Dependencies Management

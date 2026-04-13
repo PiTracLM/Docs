@@ -1,6 +1,6 @@
 ---
 title: Managing PiTrac
-description: Complete guide to managing PiTrac including the web dashboard, service management, file locations, updating software, and development workflows.
+description: Manage a PiTrac installation including the pitrac-web systemd service, file locations, updates via git pull and build.sh, backups, and clean rebuilds.
 ---
 
 # Managing PiTrac

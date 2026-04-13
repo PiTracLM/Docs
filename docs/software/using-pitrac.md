@@ -1,6 +1,6 @@
 ---
 title: Using PiTrac
-description: Complete guide to operating PiTrac golf launch monitor including the web dashboard, configuration management, calibration, testing tools, and log viewer.
+description: Operate the PiTrac web dashboard day to day, covering the shot dashboard, configuration editor, calibration wizard, testing tools, and real-time logs.
 ---
 
 # Using PiTrac

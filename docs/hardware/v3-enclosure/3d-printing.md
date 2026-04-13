@@ -1,6 +1,6 @@
 ---
 title: Enclosure Version 3 Printing
-description: Overview of the printable parts with slicer recommendations for preferred parts, variants and legacy parts.
+description: STL downloads and slicer settings for every PiTrac V3 enclosure part, including preferred prints, variants, legacy parts, and part maturity level reference.
 hide:
   - navigation
 ---

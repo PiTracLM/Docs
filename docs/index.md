@@ -1,6 +1,6 @@
 ---
 title: Home
-description: PiTrac - Open source DIY golf launch monitor using Raspberry Pi and global shutter cameras. Build your own golf simulator with ball speed, launch angle, and spin tracking.
+description: Open-source DIY golf launch monitor using Raspberry Pi and low-cost global shutter cameras. Tracks ball speed, launch angles, and 3-axis spin for sim golf.
 ---
 
 ![PiTrac Logo](assets/images/logos/PiTrac.png){ width="300" .pitrac-logo-hero }

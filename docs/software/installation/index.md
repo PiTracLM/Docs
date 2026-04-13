@@ -1,6 +1,6 @@
 ---
 title: PiTrac Installation
-description: Step-by-step PiTrac software installation guide including building from source, dependency management, and service configuration for the golf launch monitor.
+description: Install PiTrac on a Raspberry Pi by building from source in 10 to 20 minutes, including dependencies, web dashboard, camera setup, and systemd service.
 ---
 
 # PiTrac Installation Guide

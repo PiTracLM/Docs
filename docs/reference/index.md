@@ -1,6 +1,6 @@
 ---
 title: Reference
-description: Quick-reference resources for PiTrac including troubleshooting guides, glossary, known issues, project roadmap, and contributor credits.
+description: Reference hub for PiTrac DIY golf launch monitor builders, linking troubleshooting guides, a glossary, known issues, project roadmap, and contributor credits.
 ---
 
 # Reference

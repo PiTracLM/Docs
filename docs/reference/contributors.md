@@ -1,6 +1,6 @@
 ---
 title: Contributors
-description: PiTrac project contributors and attribution for open-source technologies and individuals who have supported the golf launch monitor project.
+description: Attribution for the open-source libraries, tools, individual developers, simulator partners, and hardware partners that make the PiTrac project possible.
 ---
 
 # Contributors and Attribution

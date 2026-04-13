@@ -1,6 +1,6 @@
 ---
 title: Build from Source
-description: Complete guide to building PiTrac from source including cloning the repository, running the developer build, and verifying installation on Raspberry Pi.
+description: Build PiTrac from source on Raspberry Pi using build.sh dev, which installs dependencies, compiles the C++ binary, and sets up the FastAPI web server.
 ---
 
 # Build PiTrac from Source

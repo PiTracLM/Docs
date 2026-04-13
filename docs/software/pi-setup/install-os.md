@@ -1,6 +1,6 @@
 ---
 title: Install Raspberry Pi OS
-description: Step-by-step guide to installing Raspberry Pi OS using Raspberry Pi Imager including OS selection, configuration settings, and first boot for PiTrac.
+description: Flash Raspberry Pi OS 64-bit Trixie using Raspberry Pi Imager for PiTrac, covering OS selection, hostname, SSH, WiFi setup, and the first boot process.
 ---
 
 # Install Raspberry Pi OS

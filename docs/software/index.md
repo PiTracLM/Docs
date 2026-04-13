@@ -1,6 +1,6 @@
 ---
 title: Software
-description: Complete software setup guide for PiTrac including Raspberry Pi OS installation, PiTrac software installation, web dashboard configuration, and camera calibration.
+description: Software setup hub for PiTrac DIY golf launch monitor covering Raspberry Pi configuration, installation, web dashboard use, and simulator integration.
 ---
 
 # Software

@@ -1,6 +1,6 @@
 ---
 title: Known Issues
-description: Current known issues, limitations, and areas for improvement in PiTrac golf launch monitor.
+description: Current PiTrac limitations and open issues across shot detection, strobe processing, the 3D-printed enclosure, cameras, performance, and build quality.
 ---
 
 # Known Issues

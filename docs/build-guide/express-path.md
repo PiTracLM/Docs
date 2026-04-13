@@ -1,6 +1,6 @@
 ---
 title: Express Path
-description: Fast-track setup for experienced users - streamlined installation, configuration, and calibration to get your PiTrac tracking shots quickly. Assumes hardware is assembled.
+description: Streamlined PiTrac setup for experienced users: install Raspberry Pi OS, build PiTrac software, configure cameras, calibrate, and hit your first shot.
 ---
 
 # Express Path Setup

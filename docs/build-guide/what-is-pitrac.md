@@ -1,6 +1,6 @@
 ---
 title: What is PiTrac?
-description: Learn about PiTrac, the open-source DIY golf launch monitor that measures ball speed, launch angles, and spin using affordable Raspberry Pi hardware and infrared strobe imaging. Community-built learning project for makers.
+description: What PiTrac is and isn't: an open-source photometric DIY golf launch monitor, a maker learning platform, and a grassroots push against closed-off tech.
 ---
 
 # PiTrac -- What is it? And What is it Not?

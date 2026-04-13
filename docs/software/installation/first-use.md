@@ -1,6 +1,6 @@
 ---
 title: First Use
-description: First-time setup for PiTrac including accessing the web dashboard, running strobe calibration, camera calibration, and starting the launch monitor.
+description: Open the PiTrac dashboard on port 8080, configure cameras, run strobe and camera calibration, start the launch monitor, and hit your first tracked shot.
 ---
 
 # First Use Guide

@@ -1,6 +1,6 @@
 ---
 title: Enclosure Version 3 Assembly
-description: Assembly instructions for the V3 Enclosure.
+description: Step-by-step assembly instructions for the PiTrac V3 enclosure, covering camera eyeballs, IR LED board, PSU stack, Pi5 electronics, and cover installation.
 ---
 
 # Enclosure Version 3 / Assembly

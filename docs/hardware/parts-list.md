@@ -1,6 +1,6 @@
 ---
 title: Parts List
-description: Complete parts list and shopping guide for building your PiTrac DIY golf launch monitor, including Raspberry Pi, cameras, electronics, and 3D printing materials.
+description: Complete parts list for building a PiTrac DIY golf launch monitor, including Raspberry Pi 5, global shutter cameras, PCB components, and enclosure hardware.
 hide:
   - navigation
   - toc

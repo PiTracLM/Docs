@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Comprehensive troubleshooting guide for PiTrac installation issues including build failures, service problems, camera detection, and web interface access.
+description: Fix common PiTrac installation issues including build failures, web service errors, camera detection problems, shot detection, and performance tuning.
 ---
 
 # Installation Troubleshooting

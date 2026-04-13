@@ -1,6 +1,6 @@
 ---
 title: Testing Framework
-description: PiTrac testing infrastructure including web UI testing tools, Python pytest tests, and C++ test suites.
+description: PiTrac testing at every level from the web UI hardware and calibration tools to Python pytest suites for the web server and C++ Meson build validation.
 ---
 
 # Testing Framework

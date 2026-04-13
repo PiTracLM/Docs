@@ -1,6 +1,6 @@
 ---
 title: System Overview
-description: PiTrac architecture, core components, data flow, and design principles for developers.
+description: PiTrac launch monitor architecture covering the FastAPI web server, pitrac_lm C++ core, camera and GPIO hardware layers, data flow, and design principles.
 ---
 
 # System Overview

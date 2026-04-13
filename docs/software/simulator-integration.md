@@ -1,6 +1,6 @@
 ---
 title: Simulator Integration
-description: Connect PiTrac golf launch monitor to E6 Connect, GSPro, and TruGolf simulators. Complete network setup, configuration, and integration guide for golf simulation software.
+description: Connect PiTrac to E6 Connect, GSPro, and TruGolf with network configuration, IP and port setup on ports 2483 and 921, and test scripts to verify shots.
 ---
 
 # Connecting to Golf Simulators

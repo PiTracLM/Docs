@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Comprehensive troubleshooting guide for PiTrac golf launch monitor covering camera problems, ball detection, calibration failures, shot reading issues, and common software errors.
+description: Fix common PiTrac golf launch monitor problems with camera detection, ball tracking, calibration timeouts, shot reading, performance, services, and networking.
 ---
 
 # Troubleshooting

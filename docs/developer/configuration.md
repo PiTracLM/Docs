@@ -1,6 +1,6 @@
 ---
 title: Configuration Management
-description: PiTrac's three-tier configuration system, web UI interface, REST API, and C++ ConfigurationManager.
+description: PiTrac's three-tier configuration system with web UI categories, REST API endpoints, C++ ConfigurationManager singleton, and environment variable overrides.
 ---
 
 # Configuration Management
