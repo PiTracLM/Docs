@@ -220,7 +220,7 @@ After completing installation:
 **For installation issues:**
 
 - Check the **[Troubleshooting Guide](troubleshooting.md)** first
-- Review logs via the web dashboard (3-dot menu > Logging) or `journalctl -u pitrac-web`
+- Review logs via the web dashboard (3-dot menu > Logs) or `journalctl -u pitrac-web`
 - Verify prerequisites were completed
 
 **Community support:**

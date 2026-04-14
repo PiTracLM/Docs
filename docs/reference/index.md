@@ -17,6 +17,14 @@ Supplementary resources for PiTrac builders and developers. Use this section whe
 
     [:octicons-arrow-right-24: Troubleshooting guide](troubleshooting.md)
 
+-   :material-file-tree:{ .lg .middle } **Files and Logs**
+
+    ---
+
+    Canonical reference for where PiTrac stores logs, configuration, shot images, and runtime state. Useful when troubleshooting or collecting logs for a bug report.
+
+    [:octicons-arrow-right-24: Files and Logs reference](files-and-logs.md)
+
 -   :material-book-alphabet:{ .lg .middle } **Glossary**
 
     ---

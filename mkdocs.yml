@@ -165,6 +165,7 @@ nav:
   - Reference:
     - reference/index.md
     - Troubleshooting: reference/troubleshooting.md
+    - Files and Logs: reference/files-and-logs.md
     - Glossary: reference/glossary.md
     - Known Issues: reference/known-issues.md
     - Roadmap: reference/roadmap.md

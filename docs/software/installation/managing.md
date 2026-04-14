@@ -143,8 +143,10 @@ Understanding where PiTrac stores its files helps with troubleshooting and maint
 | Path | Description |
 |---|---|
 | `~/.pitrac/state/` | Runtime state files |
-| `~/.pitrac/logs/` | Application logs (pitrac.log, web-server.log) |
+| `~/.pitrac/logs/` | Launch monitor log (`pitrac.log`). Web server logs go to the systemd journal, not a file. |
 | `~/.pitrac/run/` | PID files for process management |
+
+See the [Files and Logs reference](../../reference/files-and-logs.md) for the complete map of where PiTrac stores everything.
 
 **Captured data**:
 

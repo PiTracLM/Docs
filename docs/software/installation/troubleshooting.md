@@ -158,7 +158,7 @@ Solutions to common issues encountered during and after PiTrac installation.
 
     **Symptom**: Click "Start" in web interface but process stays stopped
 
-    **Check logs**:
+    **Check logs** (see the [Files and Logs reference](../../reference/files-and-logs.md) for the full log map):
     ```bash
     tail -f ~/.pitrac/logs/pitrac.log
     ```
@@ -518,6 +518,8 @@ journalctl -u pitrac-web -f
 # System logs
 dmesg | tail -n 50
 ```
+
+See the [Files and Logs reference](../../reference/files-and-logs.md) for the full map of where PiTrac stores logs, config, images, and runtime state.
 
 **2. Check web server status**:
 
