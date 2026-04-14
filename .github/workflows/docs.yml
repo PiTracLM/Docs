@@ -29,9 +29,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - env:
-          DISABLE_MKDOCS_2_WARNING: "true"
-        run: mkdocs build
+      - run: properdocs build
 
       - uses: actions/upload-pages-artifact@v3
         with:
