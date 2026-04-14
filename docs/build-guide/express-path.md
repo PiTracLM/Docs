@@ -334,6 +334,7 @@ Watch the status indicators in the header:
 
 - Menu then Logs
 - Select "PiTrac Camera 1" from the service dropdown and look for errors
+- For everywhere PiTrac writes logs, config, and images, see the [Files and Logs reference](../reference/files-and-logs.md)
 
 ---
 

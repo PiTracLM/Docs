@@ -175,7 +175,7 @@ This step confirms PiTrac can actually see the ball before trying to calibrate.
 
 ??? note "Ball detection failing?"
     - Check the images that the process captures (usually at `~/LM_Shares/Images`)
-    - Check the latest log files for errors (`~/.pitrac/logs`)
+    - Check the latest log files for errors (`~/.pitrac/logs`) -- see the [Files and Logs reference](../../reference/files-and-logs.md) for everywhere PiTrac writes
     - Check lighting (turn on strobes, adjust camera gain in **Configuration**)
     - Verify ball is actually on the rig
     - Make sure camera is aimed at ball
@@ -352,7 +352,7 @@ Hit some balls and check if speeds and angles look reasonable:
 
     - Ball moved during calibration? Try again, keep it still
     - Camera type set wrong? Check **Configuration > Cameras > Auto Detect**
-    - Check logs (Logging page) for errors
+    - Check logs (Logs page) for errors
 
     **Camera 2** (should take 90-120 seconds):
 

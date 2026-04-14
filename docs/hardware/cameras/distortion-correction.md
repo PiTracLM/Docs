@@ -196,7 +196,7 @@ If the undistorted image looks *more* warped than the raw image, the calibration
 ??? note "Capture completes but the result is not saved"
 
     - Check `~/.pitrac/config/calibration_data.json` -- the camera matrix and distortion coefficients for this camera should be populated.
-    - Check the logs (Logs page) for errors during the save step.
+    - Check the logs (Logs page, or see the [Files and Logs reference](../../reference/files-and-logs.md)) for errors during the save step.
 
 ---
 
