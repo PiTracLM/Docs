@@ -2,10 +2,10 @@ site_name: PiTrac Documentation
 site_description: >-
   Open-source DIY golf launch monitor built with Raspberry Pi.
   Ball speed, launch angles, spin rates, and simulator integration.
-site_url: https://pitraclm.github.io/Docs
+site_url: https://docs.pitrac.org/
 repo_url: https://github.com/PiTracLM/PiTrac
 repo_name: PiTracLM/PiTrac
-edit_uri: ""
+edit_uri_template: 'https://github.com/PiTracLM/Docs/edit/main/docs/{path}'
 
 copyright: Copyright &copy; 2024-2026 PiTrac Community
 
@@ -59,9 +59,7 @@ plugins:
   - privacy
   - optimize
   - social:
-      cards_layout_options:
-        logo: docs/assets/images/logos/Social.png
-        background_color: "#3f51b5"
+      cards_layout: brand
   - glightbox
   - git-revision-date-localized:
       enable_creation_date: true

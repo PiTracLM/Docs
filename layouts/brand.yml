@@ -1,0 +1,81 @@
+definitions:
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ config.site_name }}
+    {%- endif -%}
+
+  - &page_title >-
+    {{ page.meta.get("title", page.title) }}
+
+  - &page_description >-
+    {{ page.meta.get("description", config.site_description) | x }}
+
+  - &site_name >-
+    {{ config.site_name }}
+
+tags:
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+size: { width: 1200, height: 630 }
+layers:
+  # Solid black background
+  - background:
+      color: "#000000"
+
+  # Logo on the right (420x420, transparent PNG composited over black)
+  - size: { width: 420, height: 420 }
+    offset: { x: 740, y: 105 }
+    background:
+      image: docs/assets/images/logos/SQ-White-Transparent-BG.png
+
+  # Site name (top-left)
+  - size: { width: 640, height: 48 }
+    offset: { x: 64, y: 64 }
+    typography:
+      content: *site_name
+      color: "#ffffff"
+      font:
+        family: Roboto
+        style: Bold
+
+  # Page title (main text block, left-center)
+  - size: { width: 640, height: 280 }
+    offset: { x: 64, y: 150 }
+    typography:
+      content: *page_title
+      align: start
+      color: "#ffffff"
+      line:
+        amount: 3
+        height: 1.25
+      font:
+        family: Roboto
+        style: Bold
+
+  # Page description (bottom-left)
+  - size: { width: 640, height: 96 }
+    offset: { x: 64, y: 470 }
+    typography:
+      content: *page_description
+      align: start
+      color: "#c7c7c7"
+      line:
+        amount: 2
+        height: 1.4
+      font:
+        family: Roboto
+        style: Regular
