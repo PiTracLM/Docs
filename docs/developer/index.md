@@ -55,7 +55,7 @@ Welcome to the PiTrac development documentation. This guide covers developing, b
 
 ### Prerequisites
 
-- Raspberry Pi 4/5 with 8GB RAM (for native development)
+- Raspberry Pi 5 with 8GB RAM (for native development)
 - Ubuntu/Debian Linux (for cross-compilation)
 - Docker installed (for containerized builds)
 - Git

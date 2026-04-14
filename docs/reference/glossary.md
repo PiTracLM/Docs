@@ -82,12 +82,7 @@ Launch Angle
 :   Ball trajectory angle measurements provided by PiTrac, including both vertical and horizontal components.
 
 libcamera
-:   Open-source camera stack and framework used by PiTrac for camera control on Raspberry Pi systems. Commands use `rpicam-*` on Pi 5 and `libcamera-*` on Pi 4.
-
-## M
-
-MsgPack
-:   Platform-independent message serialization standard used by PiTrac for encoding data payloads in its interfaces.
+:   Open-source camera stack and framework used by PiTrac for camera control on Raspberry Pi systems. Commands use `rpicam-*` on Pi 5.
 
 ## O
 

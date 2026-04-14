@@ -167,17 +167,9 @@ Solutions to common issues encountered during and after PiTrac installation.
 
     **1. Cameras not detected**
 
-    === "Pi 5"
-
-        ```bash
-        rpicam-hello --list-cameras
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        libcamera-hello --list-cameras
-        ```
+    ```bash
+    rpicam-hello --list-cameras
+    ```
 
     Should show 2 cameras.
 
@@ -219,37 +211,19 @@ Solutions to common issues encountered during and after PiTrac installation.
 
     **Check boot configuration**:
 
-    === "Pi 5"
-
-        ```bash
-        cat /boot/firmware/config.txt | grep camera
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        cat /boot/config.txt | grep camera
-        ```
+    ```bash
+    cat /boot/firmware/config.txt | grep camera
+    ```
 
     **Should have**: `camera_auto_detect=1`
 
     **If missing, add it**:
 
-    === "Pi 5"
-
-        ```bash
-        sudo nano /boot/firmware/config.txt
-        # Add: camera_auto_detect=1
-        sudo reboot now
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        sudo nano /boot/config.txt
-        # Add: camera_auto_detect=1
-        sudo reboot now
-        ```
+    ```bash
+    sudo nano /boot/firmware/config.txt
+    # Add: camera_auto_detect=1
+    sudo reboot now
+    ```
 
     **Verify ribbon cable connection**:
 
@@ -263,10 +237,7 @@ Solutions to common issues encountered during and after PiTrac installation.
     echo $LIBCAMERA_RPI_CONFIG_FILE
     ```
 
-    Should point to correct pipeline:
-
-    - Pi 4: `/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml`
-    - Pi 5: `/usr/share/libcamera/pipeline/rpi/pisp/rpi_apps.yaml`
+    Should point to: `/usr/share/libcamera/pipeline/rpi/pisp/rpi_apps.yaml`
 
 ??? note "Only One Camera Detected"
 
@@ -280,25 +251,14 @@ Solutions to common issues encountered during and after PiTrac installation.
 
     **Identify which camera is missing**:
 
-    === "Pi 5"
+    ```bash
+    rpicam-hello --list-cameras
+    # Shows camera IDs and ports
 
-        ```bash
-        rpicam-hello --list-cameras
-        # Shows camera IDs and ports
-
-        # Try each camera individually
-        rpicam-hello --camera 0
-        rpicam-hello --camera 1
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        libcamera-hello --list-cameras
-
-        libcamera-hello --camera 0
-        libcamera-hello --camera 1
-        ```
+    # Try each camera individually
+    rpicam-hello --camera 0
+    rpicam-hello --camera 1
+    ```
 
     **Hardware checks**:
 
@@ -479,7 +439,7 @@ Solutions to common issues encountered during and after PiTrac installation.
     **Common causes**:
 
     - Multiple PiTrac instances running
-    - Detection method too intensive (YOLO+SAHI on Pi 4)
+    - Detection method too intensive
     - Logging level set too high (debug)
 
     **Solutions**:

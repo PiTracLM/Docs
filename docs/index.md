@@ -53,7 +53,7 @@ PiTrac determines golf ball launch speed, angles, and spin in 3 axes. Its output
 
 ## Is PiTrac For You?
 
-PiTrac is **not a commercial product** for sale -- the full design is being released as open source on GitHub for folks to build themselves. The two Pi computers and cameras are the most expensive parts, costing around **US$250 in total**. PiTrac uses off-the-shelf hardware with a [parts list](hardware/parts-list.md) including supplier links. The only custom part is a small printed circuit board that can be manufactured for a few dollars.
+PiTrac is **not a commercial product** for sale -- the full design is being released as open source on GitHub for folks to build themselves. The Raspberry Pi 5 (8GB) is the most expensive part at around **US$134.50**, with the two Pi cameras adding to the total. PiTrac uses off-the-shelf hardware with a [parts list](hardware/parts-list.md) including supplier links. The only custom part is a small printed circuit board that can be manufactured for a few dollars.
 
 **It's not easy**, but if you're handy with a soldering iron, can figure out how to 3D print the parts, and are willing to burrow into the Linux operating system to compile and install software, you should be able to create your own PiTrac!
 

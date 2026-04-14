@@ -15,32 +15,15 @@ Things not working? This guide covers common problems and how to fix them. For i
 
     First, verify the Pi actually sees the cameras:
 
-    === "Pi 5"
-
-        ```bash
-        rpicam-hello --list-cameras
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        libcamera-hello --list-cameras
-        ```
+    ```bash
+    rpicam-hello --list-cameras
+    ```
 
     You should see your cameras listed. If not:
 
     - Check physical connections (ribbon cables fully seated, correct orientation)
     - Make sure cameras are powered
-    - Check the boot config for `camera_auto_detect=1`:
-
-    === "Pi 5"
-
-        `/boot/firmware/config.txt`
-
-    === "Pi 4"
-
-        `/boot/config.txt`
-
+    - Check `/boot/firmware/config.txt` for `camera_auto_detect=1`
     - Reboot if you just connected cameras
 
     ### Wrong Camera Type Selected
@@ -77,8 +60,6 @@ Things not working? This guide covers common problems and how to fix them. For i
     - Higher gain = more noise
 
     ### One Camera Works, Other Doesn't
-
-    Common in single-Pi mode with Camera 2.
 
     Check:
 
@@ -165,12 +146,11 @@ Things not working? This guide covers common problems and how to fix them. For i
     - Camera type wrong
     - Check logs for errors
 
-    **Camera 2:** Takes 90--120 seconds in single-Pi mode. This is normal. Be patient.
+    **Camera 2:** Takes 90--120 seconds. This is normal. Be patient.
 
     If Camera 2 consistently times out past 2 minutes:
 
     - System overloaded? (check CPU usage)
-    - Try on dual-Pi setup if you have one
     - Some setups don't need Camera 2
 
     ### Calibration Completes But Results Wrong
@@ -352,14 +332,6 @@ Things not working? This guide covers common problems and how to fix them. For i
 
 Things that trip people up:
 
-**Pi 4 vs Pi 5 Differences:**
-
-| Setting | Pi 4 | Pi 5 |
-|---------|------|------|
-| Config file | `/boot/config.txt` | `/boot/firmware/config.txt` |
-| Camera commands | `libcamera-*` | `rpicam-*` |
-| GPIO chip number | 0 | 4 |
-
 **Calibration Data Persistence:**
 
 - Calibration data is stored separately from configuration
@@ -370,7 +342,7 @@ Things that trip people up:
 
 **Camera 2 Takes Forever:**
 
-- Yes, 2 minutes is normal in single-Pi mode
+- Yes, 2 minutes is normal
 - Background process overhead
 - Not a bug, just how it works
 - Be patient

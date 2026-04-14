@@ -1,6 +1,6 @@
 ---
 title: Dependencies Management
-description: PiTrac library dependencies including OpenCV 4.13, Boost, NCNN, lgpio, libcamera, the Meson build system, and Raspberry Pi 4 versus Pi 5 platform differences.
+description: PiTrac library dependencies including OpenCV 4.13, Boost, NCNN, lgpio, libcamera, and the Meson build system.
 ---
 
 # Dependencies Management
@@ -18,7 +18,6 @@ PiTrac's dependencies as defined in `Software/LMSourceCode/ImageProcessing/meson
 | NCNN | Any | Built from source | Neural network inference (YOLO) |
 | lgpio | Any | Built/system | Pi 5 GPIO compatibility |
 | libcamera | System | System package | Kernel-dependent camera interface |
-| msgpack-cxx | Any | Built from source (7.0.0) | Serialization library |
 | yaml-cpp | Any | System package | Configuration parsing |
 | fmt | Any | System package | String formatting |
 | OpenSSL | Any | System package | Security/encryption |
@@ -34,7 +33,6 @@ The build system checks for these specific artifact versions in `packaging/build
 |----------|---------|--------|
 | OpenCV | 4.13.0 | `libopencv4.13_4.13.0-1_arm64.deb` or `opencv-4.13.0-arm64.tar.gz` |
 | lgpio | 0.2.2 | `liblgpio1_0.2.2-1_arm64.deb` or `lgpio-0.2.2-arm64.tar.gz` |
-| msgpack-cxx | 7.0.0 | `libmsgpack-cxx-dev_1:7.0.0-2_all.deb` or `msgpack-cxx-7.0.0-arm64.tar.gz` |
 
 ## Build-from-Source Dependencies
 
@@ -54,10 +52,6 @@ GPIO library built from the joan2937/lg repository. Required for Pi 5 GPIO suppo
 !!! info "lgpio System vs Custom Packages"
     The build system prefers system lgpio packages when available (e.g., from Raspberry Pi OS repos). Custom packages from `deps-artifacts/` are only used as fallback. This avoids version conflicts between custom packages (0.2.2-1) and system packages (0.2.2-1~rpt1).
 
-### msgpack-cxx 7.0.0
-
-Header-only C++ serialization library.
-
 ### NCNN
 
 Neural network inference framework used for YOLO-based ball detection. Listed as a required dependency in `meson.build` with the `HAS_NCNN` compile definition.
@@ -75,7 +69,7 @@ Key system packages required for building (installed by `build.sh dev`):
 - `libboost-dev`, `libboost-all-dev`
 - `libcamera-dev`, `libcamera-tools`
 - `libyaml-cpp-dev`, `libfmt-dev`, `libssl-dev`
-- `libmsgpack-cxx-dev`, `liblgpio-dev`
+- `liblgpio-dev`
 
 ### Media Libraries
 
@@ -140,15 +134,6 @@ cd packaging
 ```
 
 ## Platform Differences
-
-### Raspberry Pi 4 vs Pi 5
-
-| Aspect | Pi 4 | Pi 5 |
-|--------|------|------|
-| Config location | `/boot/config.txt` | `/boot/firmware/config.txt` |
-| Camera tools | `libcamera-*` | `rpicam-*` |
-| GPIO chip | 0 | 4 |
-| Camera package | `libcamera-apps` | `rpicam-apps` |
 
 ### Architecture Support
 
@@ -235,7 +220,6 @@ The `build.sh dev` script handles this automatically.
 | Boost | >= 1.74.0 | System package |
 | NCNN | Latest | Built from source |
 | lgpio | 0.2.2 | System or built |
-| msgpack-cxx | 7.0.0 | Built from source / DEB |
 | libcamera | System | System package |
 | yaml-cpp | System | System package |
 | fmt | System | System package |

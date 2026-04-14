@@ -1,6 +1,6 @@
 ---
 title: Raspberry Pi Setup
-description: Prepare a Raspberry Pi 5 or Pi 4 for PiTrac from blank SD card to a fully updated system ready for install, with optional NVMe and NAS configurations.
+description: Prepare a Raspberry Pi 5 for PiTrac from blank SD card to a fully updated system ready for install, with optional NVMe and NAS configurations.
 ---
 
 # Raspberry Pi Setup & Configuration
@@ -33,7 +33,7 @@ This guide covers setting up your Raspberry Pi from a blank SD card to a fully c
 
 ### Required Hardware
 
-- **Raspberry Pi 5** with at least 8GB RAM (Pi 4 also supported)
+- **Raspberry Pi 5** with at least 8GB RAM
 - **MicroSD card** - 64GB minimum (32GB may work but 64GB+ recommended)
 - **Power supply** - Official Raspberry Pi power supply recommended
 - **Network connection** - Ethernet cable strongly recommended for initial setup
@@ -93,7 +93,6 @@ Configure optional features for enhanced performance and development workflows.
 
 - **NVMe Boot** - Boot from SSD for 5-10x speed improvement
 - **NAS Mounting** - Mount remote drives for safer development
-- **Samba Server** - Share files between Pis
 - **SSH Keys** - Passwordless authentication
 - **Git Setup** - Configure for shared drives
 
@@ -108,9 +107,7 @@ Configure optional features for enhanced performance and development workflows.
 
 Modern PiTrac uses a simplified architecture:
 
-- **Single Pi setup** is now standard
-- All services run on one Raspberry Pi 5
-- Legacy dual-Pi configurations still supported but not recommended
+- All services run on a single Raspberry Pi 5
 - Pre-built packages handle dependencies automatically
 
 You **do not** need to manually build OpenCV or other dependencies - the installation process handles everything.

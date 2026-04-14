@@ -69,17 +69,9 @@ Camera configuration and testing are done through the web dashboard:
 
 To verify cameras are detected at the OS level:
 
-=== "Pi 5"
-
-    ```bash
-    rpicam-hello --list-cameras
-    ```
-
-=== "Pi 4"
-
-    ```bash
-    libcamera-hello --list-cameras
-    ```
+```bash
+rpicam-hello --list-cameras
+```
 
 ## Calibration
 
@@ -258,7 +250,6 @@ The `build.sh` script uses pre-built dependencies either from the PiTrac APT rep
 |---|---|---|
 | OpenCV | 4.13.0 | Saves ~60 minutes vs building from source |
 | lgpio | 0.2.2 | System packages preferred when available |
-| msgpack-cxx | 7.0.0 | Message serialization |
 
 **If artifacts are missing**:
 

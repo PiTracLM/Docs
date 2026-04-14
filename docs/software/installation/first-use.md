@@ -139,7 +139,37 @@ The calibrated DAC value is saved to the configuration and automatically applied
 
 ---
 
-## Step 5: Camera Calibration
+## Step 5: Lens Distortion Correction
+
+Before camera calibration, correct your cameras' lens distortion. Every downstream measurement (focal length, camera angles, ball position, shot tracking) is more accurate when the input images have been undistorted first.
+
+You will need a **printed ChArUco board**, mounted on a rigid, perfectly flat backing.
+
+!!! warning "Remove Camera 2's IR-pass filter first"
+    If the IR-pass filter is already installed on Camera 2 (the flight camera), temporarily remove it before running distortion calibration. The filter blocks visible light and the ChArUco pattern will not be detectable. Re-install the filter after both cameras are calibrated. Camera 1 is not affected.
+
+!!! danger "Print at 100% and mount on a rigid flat surface"
+    - Print the board **at 100% scale** -- disable "Fit to Page" and verify a square measures 23 mm with a ruler
+    - Glue or tape the printed sheet to foam board, MDF, or hardboard so it cannot flex
+    - A board that bends or curls even slightly will produce a worse calibration than no calibration at all
+
+**Quick steps:**
+
+1. Navigate to the **Calibration** page and open the **Lens Distortion** tab
+2. Click **Print Calibration Pattern** and print the board at 100% scale
+3. Mount the printed sheet on a stiff flat backing
+4. Click **Calibrate Camera 1** and slowly move the board through the 3x3 coverage grid with a mix of flat and tilted poses until the system completes automatically
+5. Verify with the **Undistort Preview** -- straight edges in the scene should stay straight after undistortion
+6. Repeat for **Camera 2**
+
+Total time: a few minutes per camera. This is a one-time-per-lens step.
+
+!!! note "Full details"
+    See [Distortion Correction](../../hardware/cameras/distortion-correction.md) for complete instructions, coverage tips, and troubleshooting.
+
+---
+
+## Step 6: Camera Calibration
 
 Camera calibration teaches PiTrac where your cameras are positioned and their lens characteristics. Without calibration, ball speed and angle calculations will be incorrect.
 
@@ -159,7 +189,7 @@ Camera calibration teaches PiTrac where your cameras are positioned and their le
 
 ---
 
-## Step 6: Start PiTrac
+## Step 7: Start PiTrac
 
 With calibration complete, you can start the launch monitor.
 
@@ -173,7 +203,7 @@ With calibration complete, you can start the launch monitor.
 
 ---
 
-## Step 7: Hit Your First Shot
+## Step 8: Hit Your First Shot
 
 1. **Place a ball** on the tee in view of the cameras
 2. **Wait** for the status strip to show "Ready to Hit!"
@@ -249,17 +279,9 @@ Before hitting your first shot, verify:
 
 ??? note "Cameras Not Detected?"
 
-    === "Pi 5"
-
-        ```bash
-        rpicam-hello --list-cameras
-        ```
-
-    === "Pi 4"
-
-        ```bash
-        libcamera-hello --list-cameras
-        ```
+    ```bash
+    rpicam-hello --list-cameras
+    ```
 
     If no cameras are listed, check CSI cable connections and boot config.
 

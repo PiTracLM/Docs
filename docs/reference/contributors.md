@@ -18,11 +18,10 @@ The PiTrac team is grateful for everyone who has authored, supported, maintained
 7. [Libcamera](https://libcamera.org/) and [rpicam-apps](https://github.com/raspberrypi/rpicam-apps) -- Open-source camera stack and framework
 8. [lgpio](https://abyz.me.uk/lg/lgpio.html) -- GPIO library for Raspberry Pi 5
 9. [Meson](https://mesonbuild.com/) and [Ninja](https://ninja-build.org/) -- Build tools
-10. [Msgpack](https://msgpack.org/index.html) -- Efficient architecture-independent serialization
-11. [NCNN](https://github.com/Tencent/ncnn) -- Neural network inference framework for ball detection
-12. [OpenCV](https://opencv.org/) -- Image processing and filtering, matrix math
-13. [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-kit/) and [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/) -- 3D Printer and Slicer
-14. [Raspberry Pi](https://www.raspberrypi.com/) Single-Board Computers
+10. [NCNN](https://github.com/Tencent/ncnn) -- Neural network inference framework for ball detection
+11. [OpenCV](https://opencv.org/) -- Image processing and filtering, matrix math
+12. [Prusa MK4S](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-kit/) and [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/) -- 3D Printer and Slicer
+13. [Raspberry Pi](https://www.raspberrypi.com/) Single-Board Computers
 
 ## Individual Contributors
 

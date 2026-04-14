@@ -31,8 +31,7 @@ Install the PiTrac software on your Raspberry Pi and start tracking golf shots.
 
 Before starting, ensure you have:
 
-- **Raspberry Pi 5 with 8GB RAM** (recommended)
-    - Raspberry Pi 4 with 8GB RAM also supported
+- **Raspberry Pi 5 with 8GB RAM**
 - **Raspberry Pi OS 64-bit** installed and configured (Trixie / Debian 13)
     - See [Pi Setup Guide](../pi-setup/index.md) for OS installation
 - **Active internet connection** for downloading packages
@@ -62,7 +61,7 @@ Building from source is currently the recommended method. Ideal for:
 
 - Clones PiTrac repository from GitHub
 - Installs system dependencies (~80 packages)
-- Installs pre-built libraries (OpenCV, lgpio, msgpack-cxx)
+- Installs pre-built libraries (OpenCV, lgpio)
 - Compiles PiTrac C++ binary
 - Installs web server and services
 - Configures cameras
@@ -189,7 +188,7 @@ Understanding what PiTrac installs helps with troubleshooting:
 ### Dependencies
 
 - **System packages**: ~80 packages (Boost, libcamera, FFmpeg, Python, etc.)
-- **Pre-built libraries**: OpenCV 4.13.0, lgpio 0.2.2, msgpack-cxx 7.0.0
+- **Pre-built libraries**: OpenCV 4.13.0, lgpio 0.2.2
 - **Python packages**: FastAPI, uvicorn, python-multipart, jinja2, pillow, pyyaml, aiofiles, websockets, spidev, gpiozero
 
 ---

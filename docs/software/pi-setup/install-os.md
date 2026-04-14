@@ -56,8 +56,8 @@ Before starting:
 ### 3. Select Your Device
 
 - Click **"CHOOSE DEVICE"**
-- Select either **"Raspberry Pi 4"** or **"Raspberry Pi 5"** depending on your hardware
-- This optimizes the OS for your specific Pi model
+- Select **"Raspberry Pi 5"**
+- This optimizes the OS for your Pi
 
 ### 4. Choose the Operating System
 

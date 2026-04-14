@@ -53,7 +53,7 @@ Review the complete parts list and order all required components.
 You'll need:
 
 - Raspberry Pi 5 (8GB recommended)
-- Dual Pi cameras (Global Shutter or IMX296)
+- Two Pi cameras (Global Shutter or IMX296)
 - PCB components and enclosure materials
 - Power supplies and cables
 
@@ -128,17 +128,29 @@ This includes:
 
 **Time Required:** 5--10 minutes (build from source)
 
+### Correct Lens Distortion
+
+One-time-per-lens step. Print a ChArUco board from the web UI, mount it on a rigid flat backing, and let PiTrac measure your lens distortion so every downstream measurement stays accurate.
+
+**[Distortion Correction](../hardware/cameras/distortion-correction.md)**{ .md-button }
+
+Key requirements:
+
+- Print the calibration pattern at **100% scale** (not "Fit to Page")
+- Mount the print on a **stiff, perfectly flat backing** -- no flex, no curl
+- Work through the 3x3 coverage grid in the web UI until capture completes
+
 ### Calibrate Cameras
 
 Fine-tune your camera setup for accurate shot tracking.
 
-**[Camera Calibration](../hardware/cameras/index.md)**{ .md-button }
+**[Camera Calibration](../hardware/cameras/auto-calibration.md)**{ .md-button }
 
-Use the built-in calibration wizard to:
+Use the built-in 4-step wizard to:
 
 - Verify camera detection
-- Calibrate lens distortion
-- Set up ball detection parameters
+- Determine focal length per camera
+- Determine camera angles
 - Test shot tracking
 
 ---

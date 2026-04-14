@@ -1,6 +1,6 @@
 ---
 title: Advanced Configuration
-description: Optional Raspberry Pi configurations for PiTrac including NVMe SSD boot for faster performance, NFS or CIFS NAS mounting, Samba sharing, and SSH keys.
+description: Optional Raspberry Pi configurations for PiTrac including NVMe SSD boot for faster performance, NFS or CIFS NAS mounting, and SSH keys.
 ---
 
 # Advanced Configuration
@@ -14,7 +14,6 @@ description: Optional Raspberry Pi configurations for PiTrac including NVMe SSD 
 
 - NVMe SSD boot for faster performance
 - NAS drive mounting for safer development
-- Samba server for file sharing between Pis
 - SSH key authentication for passwordless login
 - Git configuration for shared drives
 
@@ -32,8 +31,7 @@ Boot from an NVMe SSD for significantly faster performance compared to SD cards.
 
 **Requirements:**
 
-- Raspberry Pi 5 (Pi 4 requires USB boot, not NVMe)
-- NVMe HAT or adapter board
+- Raspberry Pi 5 with NVMe HAT or adapter board
 - NVMe M.2 SSD drive
 - Already have working Pi with OS on SD card
 
@@ -256,108 +254,6 @@ Mount a remote NAS drive for safer development and easier file sharing.
 
 ---
 
-## Samba Server Setup
-
-Set up Samba to share directories between Pis or with other computers.
-
-**Use case:** Share images/data between two-Pi setups (legacy configurations).
-
-**Requirements:**
-
-- Two Raspberry Pis on same network
-- Designated "server" Pi (faster Pi recommended)
-
----
-
-### On the Server Pi
-
-**1. Install Samba**
-
-```bash
-sudo apt-get install samba samba-common-bin
-sudo systemctl restart smbd
-sudo systemctl status smbd
-```
-
-Should show "active (running)".
-
-**2. Create Shared Directory**
-
-```bash
-mkdir -p ~/LM_Shares/WebShare
-mkdir ~/LM_Shares/Images
-```
-
-**3. Configure Samba**
-
-```bash
-sudo nano /etc/samba/smb.conf
-```
-
-Add at the bottom:
-
-```ini
-[LM_Shares]
-path = /home/<PiTracUsername>/LM_Shares
-writeable = Yes
-create mask = 0777
-directory mask = 0777
-public = no
-```
-
-**4. Set Samba Password**
-
-```bash
-sudo smbpasswd -a <PiTracUsername>
-```
-
-Enter your Pi user password.
-
-**5. Restart Samba**
-
-```bash
-sudo systemctl restart smbd
-```
-
----
-
-### On the Client Pi
-
-**1. Create Mount Point**
-
-```bash
-mkdir ~/LM_Shares
-```
-
-**2. Edit fstab**
-
-```bash
-sudo nano /etc/fstab
-```
-
-Add:
-
-```
-//<SERVER_PI_IP>/LM_Shares /home/<PiTracUsername>/LM_Shares cifs username=<USERNAME>,password=<PASSWORD>,workgroup=WORKGROUP,users,exec,auto,rw,file_mode=0777,dir_mode=0777,user_xattr 0 0
-```
-
-**3. Mount**
-
-```bash
-sudo systemctl daemon-reload
-sudo mount -a
-```
-
-**4. Verify**
-
-```bash
-ls -la ~/LM_Shares
-```
-
-Should show Images and WebShare directories from server Pi.
-
----
-
 ## SSH Key Authentication
 
 Set up passwordless SSH login using SSH keys.
@@ -480,12 +376,6 @@ This tells Git to trust all repositories.
     - For NFS: Ensure NFS is enabled on NAS
     - For CIFS: Verify username/password
     - Check `/var/log/syslog` for mount errors
-
-??? note "Samba connection fails"
-    - Verify Samba is running: `sudo systemctl status smbd`
-    - Check firewall isn't blocking port 445
-    - Verify server Pi IP in client fstab
-    - Test connection: `smbclient -L //<SERVER_IP> -U <USERNAME>`
 
 ??? note "SSH key not working"
     - Verify public key is in `~/.ssh/authorized_keys`

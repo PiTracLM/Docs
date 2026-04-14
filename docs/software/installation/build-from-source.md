@@ -17,7 +17,7 @@ Building from source is the current recommended installation method. It is ideal
 
 Before starting, ensure you have:
 
-- **Raspberry Pi 5 with 8GB RAM** (recommended) or Pi 4 with 8GB
+- **Raspberry Pi 5 with 8GB RAM**
 - **Raspberry Pi OS 64-bit** installed (Trixie / Debian 13)
     - See [Pi Setup Guide](../pi-setup/index.md) if not installed
 - **Active internet connection** for downloading packages
@@ -34,10 +34,10 @@ Before starting, ensure you have:
 The build process automatically:
 
 - Installs all required system dependencies (~80+ packages)
-- Installs pre-built libraries (OpenCV, lgpio, msgpack-cxx)
+- Installs pre-built libraries (OpenCV, lgpio)
 - Compiles the PiTrac C++ binary
 - Installs the Python web server and all dependencies
-- Sets up libcamera for dual Pi cameras
+- Sets up libcamera for the two Pi cameras
 - Creates user directories and configuration files
 
 ---
@@ -68,6 +68,11 @@ sudo ./build.sh dev
 !!! warning "Important"
     You must use `sudo` as the script installs system packages and configures services.
 
+!!! info "First install modifies your boot config -- reboot when it finishes"
+    On the first run, the script edits `/boot/firmware/config.txt` to enable SPI and the camera overlays PiTrac needs. A timestamped backup is saved alongside it (`config.txt.pitrac.backup.<timestamp>`) if you ever need to revert.
+
+    **Reboot after the script finishes** so the boot config changes take effect. Cameras will not be detected until you do.
+
 ---
 
 ## What Happens During Installation
@@ -92,7 +97,7 @@ The `build.sh dev` script performs these steps automatically:
 
 - Build tools: `build-essential`, `meson`, `ninja-build`, `pkg-config`
 - Boost libraries: `libboost-dev`, `libboost-all-dev`
-- Camera libraries: `libcamera-dev`, `libcamera-tools`, `rpicam-apps` (Pi 5) or `libcamera-apps` (Pi 4)
+- Camera libraries: `libcamera-dev`, `libcamera-tools`, `rpicam-apps`
 - Video processing: FFmpeg libraries (`libavcodec-dev`, `libavformat-dev`, etc.), image libraries (JPEG, PNG, TIFF, OpenEXR)
 - Display/GUI: `libgtk-3-dev`, `qtbase5-dev`, `libdrm-dev`, `libepoxy-dev`
 - Core libraries: `libfmt-dev`, `libssl-dev`, `libyaml-cpp-dev`
@@ -107,7 +112,6 @@ These are installed either from the PiTrac APT repository or from local packages
 |---|---|---|
 | OpenCV | 4.13.0 | Computer vision (Debian only has 4.6.0) |
 | lgpio | 0.2.2 | GPIO library for Pi 5 |
-| msgpack-cxx | 7.0.0 | Message serialization |
 
 !!! note "Why pre-built?"
     Building OpenCV from source takes 45--60 minutes. Pre-built packages are provided so you don't have to wait. The build script tries the PiTrac APT repository first, then falls back to local packages.
@@ -160,10 +164,10 @@ The script compiles the C++ launch monitor binary:
 
 ### 6. Camera Configuration
 
-The script configures libcamera for dual Pi cameras:
+The script configures libcamera for the two Pi cameras:
 
-- Copies IMX296 NOIR sensor files for your Pi model (4 or 5)
-- Creates `rpi_apps.yaml` with extended timeout (1000ms)
+- Copies IMX296 NOIR sensor files
+- Creates `rpi_apps.yaml` with an extended camera timeout
 - Sets `LIBCAMERA_RPI_CONFIG_FILE` environment variable
 - Configures camera detection in boot config
 
@@ -257,17 +261,9 @@ systemctl status pitrac-web
 
 ### Test Camera Detection
 
-=== "Pi 5"
-
-    ```bash
-    rpicam-hello --list-cameras
-    ```
-
-=== "Pi 4"
-
-    ```bash
-    libcamera-hello --list-cameras
-    ```
+```bash
+rpicam-hello --list-cameras
+```
 
 Should list 2 cameras if both are connected.
 

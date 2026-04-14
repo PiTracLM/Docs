@@ -40,7 +40,7 @@ You'll install Raspberry Pi OS and configure basic system settings.
 1. Download [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on your computer
 2. Insert your MicroSD card
 3. In Imager:
-    - **Device**: Select your Pi model (Pi 4 or Pi 5)
+    - **Device**: Raspberry Pi 5
     - **OS**: Select either:
         - **"Raspberry Pi OS (64-bit)"** -- Desktop version (easier for first-timers)
         - **"Raspberry Pi OS (64-bit) Lite"** -- Command-line only (headless operation)
@@ -115,7 +115,7 @@ This installs:
 - Web server (Python FastAPI dashboard) to `/usr/lib/pitrac/web-server`
 - System services and configuration to `/etc/pitrac/`
 
-The script handles all dependencies automatically -- OpenCV 4.13.0, camera libraries, msgpack-cxx 7.0.0, and everything else.
+The script handles all dependencies automatically -- OpenCV 4.13.0, camera libraries, and everything else.
 
 ### Verify Installation
 
@@ -145,27 +145,11 @@ PiTrac needs to know what cameras you have before anything will work.
 
 Make sure your Pi can see both cameras:
 
-=== "Pi 5"
+```bash
+rpicam-hello --list-cameras
+```
 
-    ```bash
-    rpicam-hello --list-cameras
-    ```
-
-=== "Pi 4"
-
-    ```bash
-    libcamera-hello --list-cameras
-    ```
-
-You should see 2 cameras listed. If not, check CSI cable connections and ensure `camera_auto_detect=1` is in your boot config, then reboot.
-
-=== "Pi 5"
-
-    Boot config: `/boot/firmware/config.txt`
-
-=== "Pi 4"
-
-    Boot config: `/boot/config.txt`
+You should see 2 cameras listed. If not, check CSI cable connections and ensure `camera_auto_detect=1` is in your boot config (`/boot/firmware/config.txt`), then reboot.
 
 ### Access Web Interface
 
@@ -206,7 +190,43 @@ Or use your Pi's IP: `http://192.168.1.123:8080`
 
 ---
 
-## Step 4: Calibrate Cameras
+## Step 4: Correct Lens Distortion
+
+Before calibrating focal length and angles, correct lens distortion. This removes barrel/pincushion warping so every downstream measurement is accurate.
+
+### What You'll Need
+
+- A **printed ChArUco board** from the web UI's **Print Calibration Pattern** button
+- A stiff flat backing (foam board, MDF, hardboard) to glue the print to
+- Camera 2's IR-pass filter **not installed** (or temporarily removed)
+
+!!! warning "Camera 2 IR-pass filter must be off"
+    The ChArUco board is a visible-light pattern. Camera 2's IR-pass filter blocks visible light, so the detector cannot find the board with the filter in place. Either run this step before you install the filter, or unclip `IRFilter_Mount_1inchround` for the duration of the calibration and re-install it afterward. Camera 1 has no IR filter and is not affected.
+
+!!! danger "Print at 100% and keep the board perfectly flat"
+    - In the print dialog, set **Scale** to **100%** (or **Actual Size**). Disable "Fit to Page"
+    - After printing, measure one black square with a ruler -- it must be **23 mm**
+    - Mount the print on a rigid backing with spray adhesive or a glue stick spread across the entire sheet, smoothing out air bubbles. A flexing or curled board will ruin the calibration
+
+### Run the Distortion Calibration
+
+1. Open the **Calibration** page and select the **Lens Distortion** tab
+2. Click **Print Calibration Pattern** and print at 100% scale
+3. Mount the printed sheet on a stiff flat backing
+4. Click **Calibrate Camera 1**
+5. Slowly move the board so it appears in every cell of the on-screen 3x3 coverage grid, with a mix of flat-on and tilted poses
+6. The system captures 40 good frames automatically and displays an **RMS error** on completion (under 0.6 px is classified Good; above 1.2 px is auto-rejected)
+7. Click **Show Undistort Preview** -- straight edges in the scene should stay straight near the frame corners
+8. Repeat for **Camera 2**
+
+This is a **one-time-per-lens** step. It persists across reboots and software updates.
+
+!!! note "Full details"
+    See [Distortion Correction](../hardware/cameras/distortion-correction.md) for complete instructions, coverage tips, and troubleshooting.
+
+---
+
+## Step 5: Calibrate Cameras
 
 Calibration tells PiTrac the focal length and angles of your cameras. Without this, ball speed and launch angle will be completely wrong.
 
@@ -271,7 +291,7 @@ Go through the same process for Camera 2. Remember it takes longer (~2 minutes),
 
 ---
 
-## Step 5: Test It Out
+## Step 6: Test It Out
 
 Let's verify everything's working.
 
