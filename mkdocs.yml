@@ -145,6 +145,7 @@ nav:
       - Assembly: hardware/v3-enclosure/assembly.md
     - Cameras:
       - hardware/cameras/index.md
+      - Distortion Correction: hardware/cameras/distortion-correction.md
       - Auto-Calibration: hardware/cameras/auto-calibration.md
   - Software:
     - software/index.md

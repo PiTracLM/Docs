@@ -211,6 +211,11 @@ Tools:
 4. Place **spacers** in the four outermost holes on top.
 5. Only for the flight camera: Place **IR-Pass Filter** onto the lens and clip **IRFilter_Mount_1inchround** on the lens. (Process may vary)
 
+!!! warning "Run distortion calibration before installing the filter"
+    The [distortion calibration](../cameras/distortion-correction.md) step uses a printed ChArUco board illuminated by visible light. The IR-pass filter blocks visible light and will prevent the detector from finding the pattern.
+
+    Either defer installing this filter until after you have completed distortion calibration on Camera 2, or plan to temporarily remove it later when you calibrate.
+
 ---
 
 ## LED Stack Module Assembly

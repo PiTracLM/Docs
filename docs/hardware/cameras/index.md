@@ -108,35 +108,17 @@ Cameras mount in the enclosure via:
 
 PiTrac auto-detects cameras if your Pi is configured correctly.
 
-Required in boot config:
+Required in `/boot/firmware/config.txt`:
 
-=== "Pi 5"
+```ini
+camera_auto_detect=1
+```
 
-    File: `/boot/firmware/config.txt`
+Test detection:
 
-    ```ini
-    camera_auto_detect=1
-    ```
-
-    Test detection:
-
-    ```bash
-    rpicam-hello --list-cameras
-    ```
-
-=== "Pi 4"
-
-    File: `/boot/config.txt`
-
-    ```ini
-    camera_auto_detect=1
-    ```
-
-    Test detection:
-
-    ```bash
-    libcamera-hello --list-cameras
-    ```
+```bash
+rpicam-hello --list-cameras
+```
 
 You should see 2 cameras listed. If not, check connections and boot config.
 
@@ -173,13 +155,12 @@ Most settings have good defaults. The main things you will adjust are camera typ
 
 ## Calibration
 
-Cameras must be calibrated before PiTrac can accurately measure ball flight. Calibration determines:
+Cameras must be calibrated before PiTrac can accurately measure ball flight. Calibration is done in two stages:
 
-- **Focal length** -- Specific to your lens and camera
-- **Camera angles** -- How each camera is tilted/positioned
-- **Distortion corrections** -- Lens aberrations
+- **[Distortion Correction](distortion-correction.md)** -- Removes lens warping using a printed ChArUco board. One-time per lens.
+- **[Auto-Calibration](auto-calibration.md)** -- Determines focal length and camera angles using a physical rig. Re-run if cameras are moved.
 
-See the [Auto-Calibration](auto-calibration.md) guide for the recommended calibration method. It is a 4-step wizard that takes about 3 minutes total.
+Run distortion correction first, then auto-calibration. Together they take about 5-10 minutes per camera on first setup.
 
 ## Troubleshooting
 
@@ -187,7 +168,7 @@ See the [Auto-Calibration](auto-calibration.md) guide for the recommended calibr
     - Check `camera_auto_detect=1` in boot config
     - Verify CSI cable connections
     - Reboot after connecting cameras
-    - Try `rpicam-hello --list-cameras` (Pi 5) or `libcamera-hello --list-cameras` (Pi 4) to see what the Pi sees
+    - Try `rpicam-hello --list-cameras` to see what the Pi sees
 
 ??? note "Images too dark?"
     - Increase camera gain in Configuration
@@ -211,13 +192,6 @@ See the [Auto-Calibration](auto-calibration.md) guide for the recommended calibr
 
 ## Hardware Considerations
 
-**Pi 4 vs Pi 5**:
-
-- Both work fine
-- Pi 5 is faster, handles dual cameras better
-- Boot config location differs (see Camera Detection above)
-- GPIO chip numbers differ (PiTrac handles this automatically)
-
 **Lighting**:
 
 - IR strobes are essential for freezing ball motion
@@ -228,7 +202,6 @@ See the [Auto-Calibration](auto-calibration.md) guide for the recommended calibr
 
 - Use the shortest CSI cables that work for your enclosure
 - Longer cables can cause signal degradation
-- Pi 5 can handle longer cables better than Pi 4
 
 ## Next Steps
 

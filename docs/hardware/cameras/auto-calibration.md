@@ -7,6 +7,11 @@ description: Automatic camera calibration guide for PiTrac using the built-in ca
 
 Auto-calibration is the recommended way to calibrate PiTrac cameras. It automatically determines focal lengths and camera angles through a 4-step web wizard -- no tape measures, no manual JSON editing, no shell scripts. These measurements are used by PiTrac during operation to determine the location of the ball in real space relative to the unit.
 
+!!! warning "Run Distortion Correction first"
+    Do **[Distortion Correction](distortion-correction.md)** before auto-calibration. Every camera-based measurement in PiTrac -- focal length, camera angles, ball position, ball flight -- is degraded by uncorrected lens distortion, especially near the frame edges where much of the interesting ball physics happens. Auto-calibration measures ball positions from images, so if those images are still warped, the focal length and angles it computes will be biased.
+
+    Distortion calibration is a one-time-per-lens step and takes a few minutes. Do it first.
+
 ## What Auto-Calibration Does
 
 **Calculates automatically**:
@@ -457,9 +462,7 @@ Auto-calibration writes to these locations:
 
 ??? note "Lens Distortion"
 
-    Auto-calibration handles minor lens distortion automatically. For severe distortion (fisheye lenses), you may need additional undistortion steps.
-
-    Current calibration assumes reasonable lens quality. The 6mm M12 lenses that come with cameras work fine.
+    Auto-calibration does **not** correct for lens distortion -- it determines focal length and camera angles only. Lens distortion is handled by [Distortion Correction](distortion-correction.md), which must be done **before** auto-calibration (see the warning at the top of this page).
 
 ---
 
