@@ -59,9 +59,10 @@ While configuration is managed through the web UI, understanding the file struct
 
 | Location | Purpose |
 |----------|---------|
-| `~/.pitrac/config/` | User overrides (YAML, managed by web UI) |
-| `/etc/pitrac/golf_sim_config.json` | System-level JSON configuration |
-| `Software/web-server/configurations.json` | Web server configuration definitions |
+| `~/.pitrac/config/user_settings.json` | User overrides (sparse, managed by web UI) |
+| `~/.pitrac/config/calibration_data.json` | Calibration results written by the web UI |
+| `~/.pitrac/config/generated_golf_sim_config.json` | Merged runtime config that the `pitrac_lm` binary actually reads |
+| `Software/web-server/configurations.json` | Web server configuration schema and defaults |
 
 !!! info
     The file `configurations.json` exists at `Software/web-server/configurations.json` and defines the configuration schema used by the web UI.
@@ -99,14 +100,14 @@ For developers working on the core C++ code:
 // Get singleton instance
 ConfigurationManager& config = ConfigurationManager::GetInstance();
 
-// Load configuration (auto-loads YAML overrides)
-config.LoadConfigFile("golf_sim_config.json");
+// Load the merged runtime configuration written by the web server.
+// This file contains system defaults, user overrides, and calibration
+// results already merged together.
+config.LoadConfigFile(".pitrac/config/generated_golf_sim_config.json");
 
 // Get values with defaults
 float gain = config.GetFloat("gs_config.cameras.kCamera1Gain", 2.0f);
 bool putting = config.GetBool("gs_config.modes.kStartInPuttingMode", false);
-
-// Values automatically include web UI overrides
 ```
 
 ## Environment Variables
