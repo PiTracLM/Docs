@@ -108,6 +108,9 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra:
+  analytics:
+    provider: google
+    property: G-XWPC40V035
   generator: false
   social:
     - icon: fontawesome/brands/github
