@@ -163,20 +163,26 @@ If you're a true novice at soldering, some of it will take time.
     - Verify no shorts between power and ground
     - Double-check component orientation (ICs, diodes, polarized caps)
 
+## Assmebled Board for Reference
+
+![Assembled PiTrac V3 Connection Board](../assets/images/hardware/PiTrac_V3_ConnectorBoard.jpg)
+
 ## Board Configuration
 
 After assembly, you must run current calibration before you will be able to capture shots.
 
 ### Test Points
 
-| Test Point | Signal                           |
-| ---------- | -------------------------------- |
-| **TP2**    | Ground reference (use for all DC measurements) |
-| **TP1**    | +5V Input                        |
-| **TP3**    | LDO Output                       |
-| **TP4**    | Current Sense                    |
-| **TP5**    | Gate Drive / Strobe Input        |
-| **TP6**    | DAC Output Voltage               |
+| <br><br>Test Point | <br><br>Signal | Value on initial startup<br>(These are nominal values.<br>Anything within 20-50mV is OK) |
+| ---------- | -------------------------------- | ------------------------- |
+| **TP2**    | Ground reference (use for all DC measurements) | 0V          |
+| **TP1**    | +5V Input                        | 5V                        |
+| **TP3**    | LDO Output                       | 9.5-10V                   |
+| **TP4**    | Current Sense                    | 0V                        |
+| **TP5**    | Gate Drive / Strobe Input        | 0V                        |
+| **TP6**    | DAC Output Voltage               | 0V                        |
+
+
 
 ## Connections
 
