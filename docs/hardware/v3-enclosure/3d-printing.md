@@ -32,7 +32,21 @@ The per-part tables below only list settings that vary between parts: build plat
 
 ---
 
+## How the tables below are organized
+
+The V3 enclosure parts are split into three groups:
+
+- **Parts List** — the default V3 build. Print every row.
+- **Variants** — substitutes for specific Parts List rows. Print a Variant *instead of* the Parts List row it replaces, based on your build (camera focal length, Pi 5 mounting style, PSU option, etc.). Variants are not extras to add on top of the Parts List.
+- **Legacy Parts List** — parts from earlier V3 revisions. Skip unless the [Assembly Guide](assembly.md) sends you here — the COB LED build path uses `LED_Eyeball.stl` + `LED_Clamp.stl` from this list.
+
+See the [V3 Enclosure overview](index.md) for the full folder layout, FreeCAD source files, and the safety disclaimer.
+
+---
+
 ## Parts List
+
+Print every row. All R1 (Release Stable) parts — see *Part Maturity Levels* at the bottom of this page for what the maturity codes mean.
 
 | Part | Maturity | Qty | Build Plate Face | Adhesion | Support | Layer height | Mass |
 |------|----------|-----|------------------|----------|---------|--------------|------|
@@ -57,13 +71,27 @@ The per-part tables below only list settings that vary between parts: build plat
 
 ## Variants
 
+Print one **instead of** a Parts List row when your build calls for it. Pick at most one per variant family — they substitute for main parts rather than add to them.
+
+| Family | Replaces / role |
+|--------|-----------------|
+| Camera eyeball (`IMX296-MPI_Eyeball_*`) | Replaces `IMX296-MPI_Eyeball_6mm_camfered.stl` — pick the focal length that matches your lens (2.8 mm or 6 mm, camfered or plain). |
+| Pi 5 carrier (`Pi5_Carrier_*`) | Replaces `Pi5_Carrier_vertical_3mm.stl` — pick height / hole pattern (e.g. `_3mmTroughHole` for NVMe-under-Pi). |
+| PSU stack | `Stack_Module_PSU.stl` is the non-ventilated alternative to `Stack_Module_PSU_vent.stl`. |
+| Stack cover | `Stack_Module_Cover.stl` / `Stack_Module_Cover_light.stl` replace `Stack_Module_Cover_forInserts.stl` (different finish / insert styles). |
+| Pan-tilt mounts (`pan-tilt_*`) | Adjustable camera + LED mount system — replaces the fixed eyeball + screen path if you want pan/tilt adjustability. |
+| Pi 5 "Bagpack" (`Pi5_Bagpack*`) | Inverted Pi 5 mounting for external USB / HDMI access — replaces the vertical Pi 5 carrier. |
+| Back interface plate | `Back_Interface_Plate.stl` / `_Type_D_Bulkhead.stl` — optional back panels for builds that need one. |
+| IR filter mount (`IRFilter_Mount_1inchround.stl`) | Alternative round IR filter holder, flight cam only. |
+
 | Part | Maturity | Qty | Build Plate Face | Adhesion | Support | Layer height | Mass |
 |------|----------|-----|------------------|----------|---------|--------------|------|
 | [IRFilter_Mount_1inchround.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/IRFilter_Mount_1inchround.stl){ .stl-download } | F2 | 1 | frontal face | none | none | 0.2 | 3 g |
 | [Pi5_Carrier_3mmTroughHole.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/Pi5_Carrier_3mmTroughHole.stl){ .stl-download } | A1 | 1 | plane face | none | none | 0.2 | 13 g |
 | [Pi5_Carrier_9mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/Pi5_Carrier_9mm.stl){ .stl-download } | P1 | 1 | plane face | none | none | 0.2 | 14 g |
 | [pan-tilt_base.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/pan-tilt_base.stl){ .stl-download } | P1 | 3 | layed flat, hexagon facing up | none | normal | 0.2 | ? |
-| [pan-tilt_Innomaker-mount.stl](https://github.com/PiTracLM/PiTrac/tree/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants){ .stl-download title="Multiple focal-length variants available — browse directory" } | P1 | 2 | large plane facing down | none | normal | 0.2 | ? |
+| [pan-tilt_Innomaker-mount-2p8mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/pan-tilt_Innomaker-mount-2p8mm.stl){ .stl-download } | P1 | 2 | large plane facing down | none | normal | 0.2 | ? |
+| [pan-tilt_Innomaker-mount-6mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/pan-tilt_Innomaker-mount-6mm.stl){ .stl-download } | P1 | 2 | large plane facing down | none | normal | 0.2 | ? |
 | [pan-tilt_LED-mount.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/pan-tilt_LED-mount.stl){ .stl-download } | P1 | 1 | large plane facing down | none | normal | 0.2 | ? |
 | [IMX296-MPI_Eyeball_2p8mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/IMX296-MPI_Eyeball_2p8mm.stl){ .stl-download } | D1 | 2 | back ring face | none | normal - touching buildplate | 0.2 | ? |
 | [Pi5_Bagpack.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/Pi5_Bagpack.stl){ .stl-download } | A1 | 1 | standing | none | normal - everywhere | 0.2 | 40 g |
@@ -79,9 +107,12 @@ The per-part tables below only list settings that vary between parts: build plat
 | [Pi5_Carrier_3mm.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/Pi5_Carrier_3mm.stl){ .stl-download } | F2 | 1 | plane face | none | none | 0.2 | 13 g |
 | [Back_Interface_Plate_Type_D_Bulkhead.stl](https://github.com/PiTracLM/PiTrac/raw/main/3D%20Printed%20Parts/Enclosure%20Version%203/Part/Print/Variants/Back_Interface_Plate_Type_D_Bulkhead.stl){ .stl-download } | P1 | 1 | flat, wider face | none | none | 0.2 | 12 g |
 
-Back_Interface_Plate_Type_D_Bulkhead uses **15 % infill** instead of the default 25 %.
+!!! note "Print exception"
+    `Back_Interface_Plate_Type_D_Bulkhead.stl` uses **15 % infill** instead of the default 25 %.
 
 ## Legacy Parts List
+
+Older V3 revisions, kept for builds that still use earlier hardware. The *LED Assembly (Legacy COB)* section of the [Assembly Guide](assembly.md) is the main reason to print from here — it pairs `LED_Eyeball.stl` with `LED_Clamp.stl` for the COB LED build path instead of the newer 5x2 IR LED board.
 
 | Part | Maturity | Qty | Build Plate Face | Adhesion | Support | Layer height | Mass |
 |------|----------|-----|------------------|----------|---------|--------------|------|

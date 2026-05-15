@@ -126,4 +126,38 @@ a.stl-download:hover {
 #stl-modal-viewer {
   flex: 1;
   min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stl-modal-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  background: var(--md-default-bg-color);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stl-modal-error {
+  pointer-events: auto;
+}
+
+.stl-modal-error a {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
+  pointer-events: auto;
+}
+
+a.stl-downloading {
+  opacity: 0.55;
+  pointer-events: none;
 }

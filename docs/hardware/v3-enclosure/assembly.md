@@ -63,7 +63,7 @@ Tools:
 7. Attach the camera to the **eyeball** using four **M2x10 mm self-tapping screws**.
 
 !!! note
-    Choose the appropriate eyeball for your camera and lens.
+    Choose the appropriate eyeball for your camera and lens. See [Variants](3d-printing.md#variants) on the 3D Printing page for the alternate eyeball STLs (2.8 mm / 6 mm, camfered / plain).
 
 ---
 
