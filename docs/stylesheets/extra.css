@@ -174,3 +174,17 @@ a.stl-downloading {
   max-height: 380px;
 }
 
+.glightbox-container .gslide-image img,
+.glightbox-container .gslide-image img.dragging {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+.glightbox-container .gslide-image img[src$=".svg"] {
+  height: 85vh;
+  width: auto;
+  max-width: 90vw;
+}
+
