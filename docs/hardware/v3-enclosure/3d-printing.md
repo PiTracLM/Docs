@@ -38,7 +38,7 @@ The V3 enclosure parts are split into three groups:
 
 - **Parts List** — the default V3 build. Print every row.
 - **Variants** — substitutes for specific Parts List rows. Print a Variant *instead of* the Parts List row it replaces, based on your build (camera focal length, Pi 5 mounting style, PSU option, etc.). Variants are not extras to add on top of the Parts List.
-- **Legacy Parts List** — parts from earlier V3 revisions. Skip unless the [Assembly Guide](assembly.md) sends you here — the COB LED build path uses `LED_Eyeball.stl` + `LED_Clamp.stl` from this list.
+- **Legacy Parts List** — parts from earlier V3 revisions. Skip unless the [Assembly Guide](assembly/index.md) sends you here — the COB LED build path uses `LED_Eyeball.stl` + `LED_Clamp.stl` from this list.
 
 See the [V3 Enclosure overview](index.md) for the full folder layout, FreeCAD source files, and the safety disclaimer.
 
@@ -112,7 +112,7 @@ Print one **instead of** a Parts List row when your build calls for it. Pick at 
 
 ## Legacy Parts List
 
-Older V3 revisions, kept for builds that still use earlier hardware. The *LED Assembly (Legacy COB)* section of the [Assembly Guide](assembly.md) is the main reason to print from here — it pairs `LED_Eyeball.stl` with `LED_Clamp.stl` for the COB LED build path instead of the newer 5x2 IR LED board.
+Older V3 revisions, kept for builds that still use earlier hardware. The *LED Assembly (Legacy COB)* section of the [Assembly Guide](assembly/index.md) is the main reason to print from here — it pairs `LED_Eyeball.stl` with `LED_Clamp.stl` for the COB LED build path instead of the newer 5x2 IR LED board.
 
 | Part | Maturity | Qty | Build Plate Face | Adhesion | Support | Layer height | Mass |
 |------|----------|-----|------------------|----------|---------|--------------|------|

@@ -161,3 +161,16 @@ a.stl-downloading {
   opacity: 0.55;
   pointer-events: none;
 }
+
+.md-typeset .assembly-diagram {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 420px;
+  height: auto;
+}
+
+.md-typeset .tabbed-content .assembly-diagram {
+  max-height: 380px;
+}
+

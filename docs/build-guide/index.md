@@ -77,7 +77,7 @@ Download the STL files and get recommendations for print settings.
 
 Put all the pieces together to complete your PiTrac hardware.
 
-**[Assembly Guide](../hardware/v3-enclosure/assembly.md)**{ .md-button }
+**[Assembly Guide](../hardware/v3-enclosure/assembly/index.md)**{ .md-button }
 
 Follow step-by-step instructions to assemble cameras, PCB, enclosure, and wiring.
 

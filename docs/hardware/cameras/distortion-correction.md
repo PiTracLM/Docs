@@ -30,7 +30,7 @@ This is separate from [Auto-Calibration](auto-calibration.md), which determines 
 
     Before distortion-calibrating Camera 2, do **one** of the following:
 
-    - **Calibrate before installing the filter** (recommended). The natural workflow is: assemble cameras and lenses, mount them in the enclosure, run distortion calibration on both cameras, then install the IR-pass filter on Camera 2. See [Camera Stack Module Assembly](../v3-enclosure/assembly.md#camera-stack-module-assembly) -- the filter install step is the last step of that section specifically so it can be deferred.
+    - **Calibrate before installing the filter** (recommended). The natural workflow is: assemble cameras and lenses, mount them in the enclosure, run distortion calibration on both cameras, then install the IR-pass filter on Camera 2. See [Camera Stack Module](../v3-enclosure/assembly/stack-modules.md#camera-stack-module). The filter install step is the last step of that section, specifically so it can be deferred.
     - **Temporarily remove the filter** if it is already installed. Unclip `IRFilter_Mount_1inchround`, set the filter somewhere safe, run the calibration, then re-install the filter. Do not bump the lens focus ring during removal/reinstall.
 
     Camera 1 has no IR-pass filter and is not affected.

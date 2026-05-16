@@ -93,7 +93,7 @@ You can run with just Camera 1 for basic ball speed and launch angle, but you ne
 Cameras mount in the enclosure via:
 
 - CSI ribbon cables to Pi (CAM0 and CAM1 ports)
-- 3D printed mounts (see [V3 Enclosure Assembly](../v3-enclosure/assembly.md) for STL files)
+- 3D printed mounts (see [V3 Enclosure Assembly](../v3-enclosure/assembly/index.md) for STL files)
 - Precise positioning is critical -- calibration corrects for small variations, but get as close as you can to the reference design
 
 !!! warning

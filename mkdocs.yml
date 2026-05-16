@@ -146,7 +146,12 @@ nav:
     - V3 Enclosure:
       - hardware/v3-enclosure/index.md
       - 3D Printing: hardware/v3-enclosure/3d-printing.md
-      - Assembly: hardware/v3-enclosure/assembly.md
+      - Assembly:
+        - hardware/v3-enclosure/assembly/index.md
+        - Eyeball Sub-Assemblies: hardware/v3-enclosure/assembly/eyeballs.md
+        - Stack Modules: hardware/v3-enclosure/assembly/stack-modules.md
+        - Electronics: hardware/v3-enclosure/assembly/electronics.md
+        - Final Assembly: hardware/v3-enclosure/assembly/installation.md
     - Cameras:
       - hardware/cameras/index.md
       - Distortion Correction: hardware/cameras/distortion-correction.md
