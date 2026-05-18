@@ -45,6 +45,27 @@ If you already have these, they will work. But if buying new, get the Global Shu
 
 - **Pi Camera v3** (IMX708). Newer sensor but lacks the high FPS mode needed for ball tracking.
 
+## Camera Preparation
+
+The Pi Global Shutter Camera needs two physical modifications before it will work with PiTrac. The InnoMaker IMX296 Mono ships ready to use and needs neither.
+
+### Remove the IR-cut Filter (Pi GS Camera only)
+
+The Pi GS camera has an internal IR-cut filter that blocks the near-infrared light from PiTrac's strobes. Remove it before installing the camera in the enclosure.
+
+Follow Raspberry Pi's [official filter-removal instructions](https://www.raspberrypi.com/documentation/accessories/camera.html#filter-removal).
+
+The InnoMaker IMX296 Mono has no IR-cut filter and works as shipped.
+
+### Wire the External Trigger (Pi GS Camera only)
+
+Camera 2 captures only when Camera 1 triggers it via a hardware sync line. The Pi GS camera does not expose trigger pins by default. Solder two wires per Raspberry Pi's [external trigger guide](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/accessories/camera/external_trigger.adoc) before installing.
+
+!!! warning "Fine-pitch surface-mount work"
+    The resistor removal step is small and difficult. Use a magnifying lamp and steady hands, and consider practicing on a scrap surface-mount board first. Quick-connect jumper wires on the new trigger leads make later debugging easier.
+
+The InnoMaker IMX296 Mono ships with Trigger+ and Trigger- pins broken out on the board, ready for the Camera 2 sync wire with no soldering.
+
 ## Lens Options
 
 PiTrac supports standard M12 mount lenses:
