@@ -26,10 +26,10 @@ This document provides a comprehensive list of all components needed to build a 
 | Quantity | Hardware                                                        | Purpose                                                              | Link                                                                                                                                     |
 | -------- | --------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | 2        | Innomaker GS Camera Module with IMX296 Mono Sensor              | RPi compatible GS cameras                                           | [Inno-Maker](https://www.inno-maker.com/product/cam-mipi296raw-trigger/)                                                                |
-| 2        | Pi 5 FPC Camera Cable -- 22-pin 0.5 mm to 15-pin 1 mm -- 300 mm | Conversion cables for RPi5's smaller CSI ports                       | [Adafruit](https://www.adafruit.com/product/5819)                                                                                        |
+| 2        | Pi 5 FPC Camera Cable, 22-pin 0.5 mm to 15-pin 1 mm, 300 mm | Conversion cables for RPi5's smaller CSI ports                       | [Adafruit](https://www.adafruit.com/product/5819)                                                                                        |
 | 2        | 6 mm 3 MP Wide Angle Lens                                      | For GS camera                                                        | [Adafruit](https://www.adafruit.com/product/4563)                                                                                        |
-| 1-2      | 1" x 1" IR Longpass Filter                                     | Must be a **longpass filter**, allowing >= 700nm light to pass       | [Edmund Optics](https://www.edmundoptics.com/p/1quot-x-1quot-optical-cast-plastic-ir-longpass-filter/5421/)                              |
-| 1        | USB COB LED Strip Lights -- 6.56 ft                              | For lighting the teed-up ball. **Must produce no infrared light**    | [Amazon](https://www.amazon.com/Aclorol-Powered-Daylight-Flexible-Backlight/dp/B0D1FYV3LM/)                                             |
+| 1-2      | 1" IR Longpass Filter (round or square)                        | Must be a **longpass filter**, passing >= 700nm. Either shape works. Print the matching filter holder STL (round or square) when you build the flight cam stack module. | [Edmund Optics](https://www.edmundoptics.com/p/1quot-x-1quot-optical-cast-plastic-ir-longpass-filter/5421/)                              |
+| 1        | USB COB LED Strip Lights, 6.56 ft                                | For lighting the teed-up ball. **Must produce no infrared light**    | [Amazon](https://www.amazon.com/Aclorol-Powered-Daylight-Flexible-Backlight/dp/B0D1FYV3LM/)                                             |
 
 ## Power Components
 
@@ -97,14 +97,14 @@ This document provides a comprehensive list of all components needed to build a 
 | -------- | ---------------------------------------- | ----------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | 10       | D6,D7,D8,D9,D10,D11,D12,D13,D14,D15     | Vishay Semiconductor Opto Division        | VSMA1085400              | [DigiKey](https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/VSMA1085400/15786357)                     |
 
-## Enclosure Panels -- V3
+## Enclosure Panels (V3)
 
 | Quantity | Hardware | Purpose | Notes |
 |----------|----------|---------|-------|
 | 1 | Acrylic Shankshield | Front panel protecting from club strikes | 138 x 264 x 4 mm (or 1/4 in); anything within 135-139.5 x 262.5-265 x 3-6.5 mm will work. "Museum style" if possible to reduce reflections |
 | 1 | Acrylic Backplate | Rear panel | 110 x 267 x 2 mm (or 1/4 in); anything within 108-111 x 265-268 x 1.5-3 mm will work. If **Back_Interface_Plate** is used, reduce length to 234.5-236.5 mm |
 
-## Hardware -- Bolts and Nuts for V3 Enclosure
+## Hardware (Bolts and Nuts) for V3 Enclosure
 
 | Quantity | Hardware | Notes | Link |
 |----------|----------|-------|------|
@@ -115,7 +115,7 @@ This document provides a comprehensive list of all components needed to build a 
 | 10 | ISO 7380-2 M5x10 mm screw | 10-15 mm, four must be 10 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8614-SSBF-M5-10-A2) |
 | 12 | ISO 7380-2 M5x15 mm screw | 10-15 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8616-SSBF-M5-14-A2) |
 | 12 | ISO 7380-2 M5x20 mm screw | 20-25 mm; ISO 4762 optional | [Accu](https://accu-components.com/us/flanged-button-screws/8619-SSBF-M5-20-A2) |
-| 4 | ISO 4762 M5x35 mm screw | optional -- alternative to the M5 through rod design | - |
+| 4 | ISO 4762 M5x35 mm screw | optional, alternative to the M5 through rod design | - |
 | 4 | ISO 4762 M3x6 mm screw | 6-15 mm; cylindrical head | - |
 | 2 | M3x6 mm screw | - | [Link](https://tinyurl.com/4y7m4uxr) |
 | 12 | M2x10 mm self-tapping screw | - | [Link](https://tinyurl.com/rj8hf3k6) |
@@ -123,7 +123,7 @@ This document provides a comprehensive list of all components needed to build a 
 | 17 | M3x10 mm self-tapping screw | - | [Link](https://tinyurl.com/rj8hf3k6) |
 | 4 | M5 x 12 mm sleeve nut | provides a more aesthetic assembly | [Link](https://tinyurl.com/3srvja7j) |
 
-## Hardware -- Bolts and Nuts for V2 Enclosure
+## Hardware (Bolts and Nuts) for V2 Enclosure
 
 | Quantity | Hardware                                | Purpose                                                                                                                          |
 | -------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -133,8 +133,8 @@ This document provides a comprehensive list of all components needed to build a 
 | 4        | M4 x 12 mm self-tapping screws         | Tower feet to base box                                                                                                           |
 | 4        | M2.5 x 8 mm self-tapping screws        | To mount Pi to backplane. Optionally, if using threaded inserts, use M2.5x6 allen-head bolts instead.                           |
 | 4        | M3 x 8 mm self-tapping screws          | Connector board to backplane. Optionally, if using threaded inserts, use M3x6 allen-head bolts instead.                         |
-| 4        | M2.5 x 4 x 3.5 mm threaded inserts    | Optional -- for mounting the Pi to backplane with inserts and bolts. 4 inserts per Pi.                                           |
-| 4        | M3 x 4 x 5 mm threaded inserts         | Optional -- for mounting the Connector Board to the backplane with inserts and bolts.                                            |
+| 4        | M2.5 x 4 x 3.5 mm threaded inserts    | Optional, for mounting the Pi to backplane with inserts and bolts. 4 inserts per Pi.                                             |
+| 4        | M3 x 4 x 5 mm threaded inserts         | Optional, for mounting the Connector Board to the backplane with inserts and bolts.                                              |
 
 !!! note "Hardware tip"
     Stainless steel screws are stronger than black carbon steel and recommended, especially with PLA material. Consider a [stainless steel assortment kit](https://www.amazon.com/s?k=stainless+steel+metric+screw+assortment) for bulk purchasing and a [metric threaded inserts kit](https://www.amazon.com/Ktehloy-Threaded-Assortment-Printing-Components/dp/B0CLKDPN65/) for 3D printed parts.

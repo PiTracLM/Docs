@@ -13,14 +13,14 @@ PiTrac uses two Raspberry Pi cameras to track golf balls in 3D. One camera watch
 
 Both recommended cameras use the Sony IMX296 sensor (5.077mm x 3.789mm sensor size, 1456 x 1088 resolution, native 232 fps, global shutter) and work identically once configured. The only difference is color vs monochrome.
 
-**InnoMaker CAM-MIPI327RAW (IMX296 Mono)** -- PiTrac type 5
+**InnoMaker CAM-MIPI327RAW (IMX296 Mono)**, PiTrac type 5
 
 - Monochrome version of the IMX296 sensor
 - Slightly better light sensitivity than the color variant
 - Requires the `imx296_trigger` tool for synchronization
 - Good for low-light setups
 
-**Raspberry Pi Global Shutter Camera (IMX296 Color)** -- PiTrac type 4
+**Raspberry Pi Global Shutter Camera (IMX296 Color)**, PiTrac type 4
 
 - Official Raspberry Pi product, widely available
 - Sony IMX296 sensor with global shutter (no rolling shutter artifacts)
@@ -43,7 +43,7 @@ If you already have these, they will work. But if buying new, get the Global Shu
 
 ### Not Supported
 
-- **Pi Camera v3** (IMX708) -- Newer sensor but lacks the high FPS mode needed for ball tracking.
+- **Pi Camera v3** (IMX708). Newer sensor but lacks the high FPS mode needed for ball tracking.
 
 ## Lens Options
 
@@ -84,7 +84,7 @@ PiTrac supports standard M12 mount lenses:
 - Positioned at an offset from Camera 1
 - Tracks ball during flight
 - Provides depth/distance data
-- Calibration takes 90-120 seconds (yes, really -- it is a two-process workflow in single-Pi mode)
+- Calibration takes 90-120 seconds (it is a two-process workflow in single-Pi mode)
 
 You can run with just Camera 1 for basic ball speed and launch angle, but you need both cameras for full 3D tracking and spin detection.
 
@@ -94,7 +94,7 @@ Cameras mount in the enclosure via:
 
 - CSI ribbon cables to Pi (CAM0 and CAM1 ports)
 - 3D printed mounts (see [V3 Enclosure Assembly](../v3-enclosure/assembly/index.md) for STL files)
-- Precise positioning is critical -- calibration corrects for small variations, but get as close as you can to the reference design
+- Precise positioning is critical. Calibration corrects for small variations, but get as close as you can to the reference design.
 
 !!! warning
     Make sure:
@@ -129,10 +129,10 @@ You should see 2 cameras listed. If not, check connections and boot config.
 
 All camera management is done through the web dashboard at `http://your-pi-ip:8080`:
 
-- **Configuration > Cameras** -- Set camera types, gain, exposure, and lens parameters
-- **Auto Detect** button -- Identifies connected cameras automatically
-- **Testing Tools > Capture Still Image** -- Test camera capture and verify images
-- **Testing Tools > Ball Detection Test** -- Verify ball detection is working
+- **Configuration > Cameras**: Set camera types, gain, exposure, and lens parameters
+- **Auto Detect** button: Identifies connected cameras automatically
+- **Testing Tools > Capture Still Image**: Test camera capture and verify images
+- **Testing Tools > Ball Detection Test**: Verify ball detection is working
 
 ## Configuration
 
@@ -140,9 +140,9 @@ Camera settings are managed in the web interface under **Configuration > Cameras
 
 **Critical Settings**:
 
-- **Camera 1 Type / Camera 2 Type** -- Must match your actual hardware (use Auto Detect)
-- **Lens Choice** -- 6mm or 3.6mm
-- **Camera Gain** -- Controls brightness (higher = brighter but noisier)
+- **Camera 1 Type / Camera 2 Type**: Must match your actual hardware (use Auto Detect)
+- **Lens Choice**: 6mm or 3.6mm
+- **Camera Gain**: Controls brightness (higher = brighter but noisier)
 
 **Advanced Settings**:
 
@@ -157,8 +157,8 @@ Most settings have good defaults. The main things you will adjust are camera typ
 
 Cameras must be calibrated before PiTrac can accurately measure ball flight. Calibration is done in two stages:
 
-- **[Distortion Correction](distortion-correction.md)** -- Removes lens warping using a printed ChArUco board. One-time per lens.
-- **[Auto-Calibration](auto-calibration.md)** -- Determines focal length and camera angles using a physical rig. Re-run if cameras are moved.
+- **[Distortion Correction](distortion-correction.md)**: Removes lens warping using a printed ChArUco board. One-time per lens.
+- **[Auto-Calibration](auto-calibration.md)**: Determines focal length and camera angles using a physical rig. Re-run if cameras are moved.
 
 Run distortion correction first, then auto-calibration. Together they take about 5-10 minutes per camera on first setup.
 
@@ -213,4 +213,4 @@ Run distortion correction first, then auto-calibration. Together they take about
 6. **Start hitting balls**
 
 !!! warning
-    The calibration wizard is the most important step -- do not skip it. Without calibration, speed and angle measurements will be completely wrong.
+    The calibration wizard is the most important step. Do not skip it. Without calibration, speed and angle measurements will be completely wrong.

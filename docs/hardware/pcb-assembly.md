@@ -18,7 +18,7 @@ The V3 Connector Board uses all through-hole construction for easier hand assemb
 - Full control of LED current including ADC for calibration
 
 !!! note "Legacy boards"
-    V3 replaces the V2 Dual Pi5 Connector Board, which used a mix of SMD and through-hole components with dual 555 timers for duty cycle control. The original V1 board used separate AC/DC supplies with opto-coupler isolation. If you have a V1 or V2 board, they still work -- just select the correct board version in the PiTrac configuration UI.
+    V3 replaces the V2 Dual Pi5 Connector Board, which used a mix of SMD and through-hole components with dual 555 timers for duty cycle control. The original V1 board used separate AC/DC supplies with opto-coupler isolation. If you have a V1 or V2 board, they still work. Just select the correct board version in the PiTrac configuration UI.
 
 ## IRLED Board
 
@@ -37,8 +37,8 @@ Fixed footprint mistake from the original IRLED revision for a last-minute LED c
 
 Any decent PCB fabricator can make this board. Two popular options:
 
-- **JLCPCB** -- <https://jlcpcb.com>
-- **PCBway** -- <https://www.pcbway.com>
+- **JLCPCB**: <https://jlcpcb.com>
+- **PCBway**: <https://www.pcbway.com>
 
 Both have easy file upload and offer assembly services.
 
@@ -97,22 +97,22 @@ Hardware/Assembly Files/V3 Connector + IRLED2/V3 Connector + IRLED2 Assembly/*
 
 ### Ordering Process
 
-1. **Upload the Gerbers** -- Upload `Gerbers.zip` to JLCPCB or PCBway
+1. **Upload the Gerbers**. Upload `Gerbers.zip` to JLCPCB or PCBway.
 
     ![Upload Gerber Files](../assets/images/hardware/upload-gerber-files.png)
 
     ![Upload Gerber Files Step 2](../assets/images/hardware/upload-gerber-files-step-2.png)
 
-2. **Board specs** -- Update the following attribute:
+2. **Board specs**. Update the following attribute:
     - Thickness: 0.8mm
 
-3. **Surface Finish** -- Ensure set to "HASL Lead-Free"
+3. **Surface Finish**. Ensure set to "HASL Lead-Free".
 
     ![Surface Finish Selection](../assets/images/hardware/surface-finish.png)
 
     Use lead-free solder for assembly, so get a lead-free board finish.
 
-4. **Quantity** -- Minimum order is usually 5 boards. Only 1 V3 Connector and 1 IRLED are required for a PiTrac build.
+4. **Quantity**. Minimum order is usually 5 boards. Only 1 V3 Connector and 1 IRLED are required for a PiTrac build.
 
 ### Assembly Service (Optional)
 
@@ -205,7 +205,7 @@ After assembly, you must run current calibration before you will be able to capt
 
 ### Optional
 
-- **J6 (USB-A):** Originally for LED strip, but Pi5 has USB 2.0 ports already -- this is redundant
+- **J6 (USB-A):** Originally for LED strip, but Pi5 has USB 2.0 ports already. This is redundant.
 
 ## Connection Guide for Raspberry Pi 5
 
