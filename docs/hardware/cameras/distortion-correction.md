@@ -35,24 +35,6 @@ This is separate from [Auto-Calibration](auto-calibration.md), which determines 
 
     Camera 1 has no IR-pass filter and is not affected.
 
-!!! danger "Camera 2 must be taken out of sync-sink mode for calibration"
-    In normal operation, Camera 2 is configured as a hardware sync sink. It only captures when Camera 1 triggers it via the XVS sync line. The web UI's distortion calibration runs Camera 2 standalone, so if `sync-sink` is enabled the camera will appear frozen (waiting forever for a trigger that never comes) and no frames will reach the ChArUco detector.
-
-    Before calibrating Camera 2:
-
-    1. **Edit `/boot/firmware/config.txt`** and comment out the sync-sink line:
-       ```
-       # dtoverlay=imx296,sync-sink
-       ```
-       (Add a `#` at the start of the line. Leave the file otherwise untouched.)
-    2. **Reboot the Pi**. `dtoverlay` changes only take effect at boot.
-    3. **Remove the IR-pass filter** (see the warning above) if it is installed.
-    4. **Run the distortion calibration** as described below.
-    5. **Uncomment the line** in `/boot/firmware/config.txt` to restore `dtoverlay=imx296,sync-sink`.
-    6. **Reboot again** so Camera 2 returns to sync-sink mode for normal shot capture.
-
-    Skipping the reboots will leave the camera in the wrong mode. The dtoverlay is read once at boot and cannot be toggled at runtime. Camera 1 does not use a sync-sink overlay and does not need this step.
-
 You need a **printed ChArUco calibration board**. PiTrac generates the exact board it expects directly from the web UI. Do not use a board downloaded from elsewhere, as the square count and dimensions must match what the detector looks for.
 
 ### 1. Print the Board
