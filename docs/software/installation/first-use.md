@@ -242,7 +242,7 @@ Before hitting your first shot, verify:
 1. **Configure your simulator** -- [Simulator Integration](../simulator-integration.md) for E6, GSPro, or TruGolf setup
 2. **Run test shots** -- verify speed and angle readings look reasonable
 3. **Fine-tune settings** -- adjust camera gain, ball detection parameters in Configuration
-4. **Learn the full interface** -- [Using PiTrac](../using-pitrac.md) for detailed page-by-page documentation
+4. **Learn the full interface** -- [Using PiTrac](../using-pitrac/index.md) for detailed page-by-page documentation
 5. **Manage your installation** -- [Managing PiTrac](managing.md) for service management, updates, and file locations
 
 **If you encounter issues:**

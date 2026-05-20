@@ -166,7 +166,14 @@ nav:
       - First Use: software/installation/first-use.md
       - Managing PiTrac: software/installation/managing.md
       - Troubleshooting: software/installation/troubleshooting.md
-    - Using PiTrac: software/using-pitrac.md
+    - Using PiTrac:
+      - software/using-pitrac/index.md
+      - Dashboard: software/using-pitrac/dashboard.md
+      - Configuration: software/using-pitrac/configuration.md
+      - Calibration: software/using-pitrac/calibration.md
+      - Testing Tools: software/using-pitrac/testing.md
+      - Logs: software/using-pitrac/logs.md
+      - System Update: software/using-pitrac/system-update.md
     - Simulator Integration: software/simulator-integration.md
   - Reference:
     - reference/index.md

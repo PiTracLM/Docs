@@ -31,7 +31,7 @@ This section covers the software setup and operation of PiTrac, from initial Ras
 
     Web interface, configuration, and calibration for day-to-day use of your launch monitor.
 
-    [:octicons-arrow-right-24: Using PiTrac](using-pitrac.md)
+    [:octicons-arrow-right-24: Using PiTrac](using-pitrac/index.md)
 
 -   :material-golf:{ .lg .middle } __Simulator Integration__
 

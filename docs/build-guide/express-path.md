@@ -377,7 +377,7 @@ Connect PiTrac to E6 Connect, GSPro, or TruGolf:
 
 Adjust ball detection, gains, and search areas:
 
-- **[Using PiTrac Guide](../software/using-pitrac.md)**
+- **[Using PiTrac Guide](../software/using-pitrac/index.md)**
 
 ### Troubleshoot Issues
 

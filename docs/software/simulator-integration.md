@@ -166,7 +166,7 @@ This sends a test shot to GSPro. Watch GSPro to see if it receives and displays 
 **Shots received but values are wrong:**
 
 - This is probably not a connection issue
-- Check your [calibration](using-pitrac.md#calibration)
+- Check your [calibration](using-pitrac/calibration.md)
 - Verify camera settings
 - Look at troubleshooting section for shot detection issues
 

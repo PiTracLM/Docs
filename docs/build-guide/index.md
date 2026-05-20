@@ -159,7 +159,7 @@ Use the built-in 4-step wizard to:
 
 Once you're up and running, these guides will help you use and maintain PiTrac:
 
-- **[Using PiTrac](../software/using-pitrac.md)** -- Operating the system day-to-day
+- **[Using PiTrac](../software/using-pitrac/index.md)** -- Operating the system day-to-day
 - **[Troubleshooting](../reference/troubleshooting.md)** -- Common issues and solutions
 - **[Hardware Overview](../hardware/index.md)** -- Detailed hardware documentation
 
