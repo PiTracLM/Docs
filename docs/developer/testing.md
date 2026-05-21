@@ -11,7 +11,7 @@ PiTrac provides testing at multiple levels: an integrated web UI testing suite f
 
 ### Access Testing Tools
 
-1. Ensure the web server is running (via `pitrac web start` or systemd)
+1. Ensure the web server is running (`sudo systemctl start pitrac-web`)
 2. Navigate to `http://your-pi-ip:8080`
 3. Click on the **Testing** section in the navigation menu
 

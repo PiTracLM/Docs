@@ -11,7 +11,7 @@ PiTrac uses a three-tier configuration system managed primarily through the web 
 
 ### Accessing Configuration
 
-1. Ensure the web server is running (via `pitrac web start` or systemd)
+1. Ensure the web server is running (`sudo systemctl start pitrac-web`)
 2. Navigate to `http://your-pi-ip:8080`
 3. Click on the **Configuration** section
 
@@ -144,7 +144,7 @@ If configuration becomes corrupted:
 
 1. Use web UI "Reset to Defaults" button
 2. Or manually remove overrides: `rm -rf ~/.pitrac/config/*`
-3. Restart web server: `pitrac web restart`
+3. Restart web server: `sudo systemctl restart pitrac-web`
 
 ### Viewing Active Configuration
 
