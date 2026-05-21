@@ -51,49 +51,49 @@ There are three different PCB filesets. The combined PCB has two BOM variants de
 
 #### V3 Connector Only
 
-```
-Hardware/Fabrication Files/V3 Connector Only Gerbers.zip
-```
+Fabrication:
+
+- [V3 Connector Only Gerbers.zip](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Fabrication%20Files/V3%20Connector%20Only%20Gerbers.zip){ .file-download }
 
 !!! warning "Assembly of V3 Connector with vendor not recommended"
     The V3 Connector is entirely through-hole and straightforward to assemble by hand. Vendor assembly is not recommended.
 
-```
-Hardware/Assembly Files/V3 Connector Only/V3 Connector Only Assembly/*
-```
+Assembly (if you do use vendor assembly):
+
+- [V3 Connector Only Bill of Materials.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20Only%20PCB/V3%20Connector%20Only%20Assembly/V3%20Connector%20Only%20Bill%20of%20Materials.csv){ .file-download }
+- [V3 Connector Only Centroid.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20Only%20PCB/V3%20Connector%20Only%20Assembly/V3%20Connector%20Only%20Centroid.csv){ .file-download }
 
 #### IRLED2 Only
 
-```
-Hardware/Fabrication Files/IRLED2 Only Gerbers.zip
-```
+Fabrication:
 
-```
-Hardware/Assembly Files/IRLED2 Only/IRLED2 Only Assembly/*
-```
+- [IRLED2 Only Gerbers.zip](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Fabrication%20Files/IRLED2%20Only%20Gerbers.zip){ .file-download }
+
+Assembly:
+
+- [IRLED2 Only Bill of Materials.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/IRLED2%20Only%20PCB/IRLED2%20Only%20Assembly/IRLED2%20Only%20Bill%20of%20Materials.csv){ .file-download }
+- [IRLED2 Only Centroid.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/IRLED2%20Only%20PCB/IRLED2%20Only%20Assembly/IRLED2%20Only%20Centroid.csv){ .file-download }
 
 #### V3 Connector + IRLED2
 
-There are two BOM variants due to it being a panel of two PCBs. It is recommended that you only use an assembler for the surface mount IR LEDs. It is more cost effective generally to purchase the components and assemble the entirely through-hole V3 connector by yourself.
+Two BOM variants are provided because the file is a panel of two PCBs. It is recommended that you only use an assembler for the surface mount IR LEDs. It is more cost effective generally to purchase the components and assemble the entirely through-hole V3 connector by yourself.
 
-```
-Hardware/Fabrication Files/V3 Connector + IRLED2 Gerbers.zip
-```
+Fabrication:
 
-**Assemble IRLED2 (Recommended)**
+- [V3 Connector + IRLED2 Gerbers.zip](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Fabrication%20Files/V3%20Connector%20%2B%20IRLED2%20Gerbers.zip){ .file-download }
 
-```
-Hardware/Assembly Files/V3 Connector + IRLED2/IRLED2 Assembly/*
-```
+Assemble IRLED2 only (recommended):
 
-**Assemble V3 Connector + IRLED2**
+- [IRLED2 Bill of Materials.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20%2B%20IRLED2%20PCB/IRLED2%20Assembly/IRLED2%20Bill%20of%20Materials.csv){ .file-download }
+- [IRLED2 Centroid.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20%2B%20IRLED2%20PCB/IRLED2%20Assembly/IRLED2%20Centroid.csv){ .file-download }
+
+Assemble V3 Connector + IRLED2:
 
 !!! warning "Assembly of V3 Connector with vendor not recommended"
     The V3 Connector is entirely through-hole and straightforward to assemble by hand. Vendor assembly is not recommended.
 
-```
-Hardware/Assembly Files/V3 Connector + IRLED2/V3 Connector + IRLED2 Assembly/*
-```
+- [V3 Connector + IRLED2 Bill of Materials.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20%2B%20IRLED2%20PCB/V3%20Connector%20%2B%20IRLED2%20Assembly/V3%20Connector%20%2B%20IRLED2%20Bill%20of%20Materials.csv){ .file-download }
+- [V3 Connector + IRLED2 Centroid.csv](https://github.com/PiTracLM/PiTrac/raw/main/Hardware/Assembly%20Files/V3%20Connector%20%2B%20IRLED2%20PCB/V3%20Connector%20%2B%20IRLED2%20Assembly/V3%20Connector%20%2B%20IRLED2%20Centroid.csv){ .file-download }
 
 ### Ordering Process
 

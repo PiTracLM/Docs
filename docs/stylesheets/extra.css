@@ -26,13 +26,15 @@
   padding: 0.4em 0.6em;
 }
 
-a.stl-download {
+a.stl-download,
+a.file-download {
   color: var(--md-typeset-a-color);
   font-weight: 600;
   white-space: nowrap;
 }
 
-a.stl-download:hover {
+a.stl-download:hover,
+a.file-download:hover {
   color: var(--md-accent-fg-color);
 }
 
