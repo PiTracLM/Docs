@@ -190,3 +190,9 @@ nav:
     - Services: developer/services.md
     - Testing: developer/testing.md
     - Dependencies: developer/dependencies.md
+  - Legacy:
+    - legacy/index.md
+    - Connector Boards: legacy/connector-boards.md
+    - V2 Board Modification: legacy/v2-board-modification.md
+    - 3D Printing (V1/V2): legacy/3d-printing.md
+    - V1 Enclosure Assembly: legacy/enclosure-assembly.md
